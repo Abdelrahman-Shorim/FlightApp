@@ -19,3 +19,5 @@ void MainWindow::on_popup_clicked()
 {
     QMessageBox::information(this,"Message","hello",QMessageBox::Ok);
 }
+
+//NancyIs Here
