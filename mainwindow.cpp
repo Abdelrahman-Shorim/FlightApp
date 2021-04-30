@@ -14,12 +14,3 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-
-void MainWindow::on_popup_clicked()
-{
-    QMessageBox::information(this,"Message","hello",QMessageBox::Ok);
-    //nour
-}
-
-//NancyIs Here
-//habiba is here
