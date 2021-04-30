@@ -18,4 +18,5 @@ MainWindow::~MainWindow()
 void MainWindow::on_popup_clicked()
 {
     QMessageBox::information(this,"Message","hello",QMessageBox::Ok);
+    //nour
 }
