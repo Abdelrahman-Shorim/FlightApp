@@ -1,7 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QMessageBox>
-#include "edittickets.h"
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -12,9 +12,13 @@ MainWindow::MainWindow(QWidget *parent)
 MainWindow::~MainWindow()
 {
     delete ui;
-    edittickets edit;
-    edit.setModal(true);
-    edit.exec();
 }
 
 
+void MainWindow::on_popup_clicked()
+{
+    QMessageBox::information(this,"Message","hello",QMessageBox::Ok);
+}
+
+//NancyIs Here
+//habiba is here
