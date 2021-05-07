@@ -13,8 +13,5 @@ MainWindow::MainWindow(QWidget *parent)
 MainWindow::~MainWindow()
 {
     delete ui;
-    PlaneSeats edit;
-    edit.setModal(true);
-    edit.exec();
 }
 
