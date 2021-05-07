@@ -16,6 +16,8 @@ public:
     ~MainWindow();
 
 private slots:
+    void on_popup_clicked();
+
 private:
     Ui::MainWindow *ui;
 };
