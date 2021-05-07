@@ -11,20 +11,26 @@ CONFIG += c++11
 SOURCES += \
     costoftickets.cpp \
     edittickets.cpp \
+    listsofpassengers.cpp \
     main.cpp \
     mainwindow.cpp \
+    planeseats.cpp \
     receipt.cpp
 
 HEADERS += \
     costoftickets.h \
     edittickets.h \
+    listsofpassengers.h \
     mainwindow.h \
+    planeseats.h \
     receipt.h
 
 FORMS += \
     costoftickets.ui \
     edittickets.ui \
+    listsofpassengers.ui \
     mainwindow.ui \
+    planeseats.ui \
     receipt.ui
 
 # Default rules for deployment.

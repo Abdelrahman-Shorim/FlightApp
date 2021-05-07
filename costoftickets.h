@@ -16,7 +16,6 @@ public:
     ~costoftickets();
 
 private slots:
-    void on_pushButton_2_clicked();
 
 private:
     Ui::costoftickets *ui;
