@@ -46,7 +46,11 @@ HEADERS += \
 
 FORMS += \
     addanewflight.ui \
+<<<<<<< HEAD
+    addnewpassenger.ui \
+=======
     adminhomepage.ui \
+>>>>>>> 795192df1f61bf74afef39b1395e90ccbb95dee0
     editanewflight.ui \
     editnewpassenger.ui \
     mainwindow.ui \
