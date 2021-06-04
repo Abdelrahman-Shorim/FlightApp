@@ -34,6 +34,7 @@ HEADERS += \
 
 FORMS += \
     addanewflight.ui \
+    addnewpassenger.ui \
     editanewflight.ui \
     editnewpassenger.ui \
     mainwindow.ui \
