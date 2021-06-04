@@ -20,7 +20,11 @@ SOURCES += \
     receipt.cpp \
     planeseats.cpp \
     listsofpassengers.cpp \
-    userhomepage.cpp
+    userhomepage.cpp \
+    availableflights.cpp \
+    editdeletereservation.cpp \
+    flightrejected.cpp \
+    visapayment.cpp
 
 
 HEADERS += \
@@ -34,7 +38,11 @@ HEADERS += \
     receipt.h \
     planeseats.h \
     listsofpassengers.h \
-    userhomepage.h
+    userhomepage.h \
+    availableflights.h \
+    editdeletereservation.h \
+    flightrejected.h \
+    visapayment.h
 
 FORMS += \
     addanewflight.ui \
@@ -47,7 +55,11 @@ FORMS += \
     receipt.ui \
     planeseats.ui \
     listsofpassengers.ui \
-    userhomepage.ui
+    userhomepage.ui \
+    availableflights.ui \
+    editdeletereservation.ui \
+    flightrejected.ui \
+    visapayment.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
