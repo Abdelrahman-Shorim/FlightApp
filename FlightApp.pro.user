@@ -1,26 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<<<<<<< HEAD
-<!-- Written by QtCreator 4.14.2, 2021-06-04T17:48:37. -->
-<qtcreator>
- <data>
-  <variable>EnvironmentId</variable>
-  <value type="QByteArray">{d547e6f4-cc83-45f7-a558-85dad85069c0}</value>
-=======
-<<<<<<< HEAD
-<!-- Written by QtCreator 4.15.0, 2021-06-03T17:00:11. -->
+<!-- Written by QtCreator 4.15.0, 2021-06-05T02:05:40. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
   <value type="QByteArray">{6e8217f3-2dbe-4ef7-9062-1232e9febbd0}</value>
-=======
-<!-- Written by QtCreator 4.14.2, 2021-06-04T15:44:04. -->
-<qtcreator>
- <data>
-  <variable>EnvironmentId</variable>
-  <value type="QByteArray">{1f7c1131-8c80-4f5a-91c3-d0b0a91317e4}</value>
->>>>>>> 795192df1f61bf74afef39b1395e90ccbb95dee0
->>>>>>> 2124d16b9631a2ac9295ddfc9c6d8f85050cf6e7
  </data>
  <data>
   <variable>ProjectExplorer.Project.ActiveTarget</variable>
@@ -95,7 +79,7 @@
     <value type="bool" key="ClangTools.AnalyzeOpenFiles">true</value>
     <value type="bool" key="ClangTools.BuildBeforeAnalysis">true</value>
     <value type="QString" key="ClangTools.DiagnosticConfig">Builtin.DefaultTidyAndClazy</value>
-    <value type="int" key="ClangTools.ParallelJobs">4</value>
+    <value type="int" key="ClangTools.ParallelJobs">2</value>
     <valuelist type="QVariantList" key="ClangTools.SelectedDirs"/>
     <valuelist type="QVariantList" key="ClangTools.SelectedFiles"/>
     <valuelist type="QVariantList" key="ClangTools.SuppressedDiagnostics"/>
@@ -310,17 +294,15 @@
     <valuelist type="QVariantList" key="CustomOutputParsers"/>
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.CustomExecutableRunConfiguration</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey"></value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:C:/FlightApp/FlightApp/FlightApp.pro</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/FlightApp/FlightApp/FlightApp.pro</value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
+    <value type="bool" key="RunConfiguration.UseLibrarySearchPath">true</value>
     <value type="bool" key="RunConfiguration.UseQmlDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
-<<<<<<< HEAD
-=======
     <value type="bool" key="RunConfiguration.UseTerminal">true</value>
     <value type="QString" key="RunConfiguration.WorkingDirectory.default">C:/FlightApp/build-FlightApp-Desktop_Qt_5_15_2_MinGW_64_bit-Debug</value>
->>>>>>> 2124d16b9631a2ac9295ddfc9c6d8f85050cf6e7
    </valuemap>
    <value type="int" key="ProjectExplorer.Target.RunConfigurationCount">1</value>
   </valuemap>
