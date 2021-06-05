@@ -1,36 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>ListsofPassengers</class>
- <widget class="QDialog" name="ListsofPassengers">
+ <class>listofflights</class>
+ <widget class="QDialog" name="listofflights">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>465</width>
-    <height>268</height>
+    <width>543</width>
+    <height>277</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QPushButton" name="pushButton_3">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>400</x>
-     <y>200</y>
-     <width>80</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Done</string>
-   </property>
-  </widget>
-  <widget class="QWidget" name="">
-   <property name="geometry">
-    <rect>
-     <x>140</x>
-     <y>0</y>
+     <x>120</x>
+     <y>10</y>
      <width>258</width>
      <height>250</height>
     </rect>
@@ -54,6 +41,19 @@
      </widget>
     </item>
    </layout>
+  </widget>
+  <widget class="QPushButton" name="pushButton_3">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>220</y>
+     <width>80</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>done</string>
+   </property>
   </widget>
  </widget>
  <resources/>
