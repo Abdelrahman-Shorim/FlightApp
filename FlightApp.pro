@@ -24,7 +24,9 @@ SOURCES += \
     availableflights.cpp \
     editdeletereservation.cpp \
     flightrejected.cpp \
-    visapayment.cpp
+    visapayment.cpp \
+    login.cpp \
+    createaccount.cpp
 
 
 HEADERS += \
@@ -42,7 +44,9 @@ HEADERS += \
     availableflights.h \
     editdeletereservation.h \
     flightrejected.h \
-    visapayment.h
+    visapayment.h \
+    login.h \
+    createaccount.h
 
 FORMS += \
     addanewflight.ui \
@@ -59,7 +63,9 @@ FORMS += \
     availableflights.ui \
     editdeletereservation.ui \
     flightrejected.ui \
-    visapayment.ui
+    visapayment.ui \
+    login.ui \
+    createaccount.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
