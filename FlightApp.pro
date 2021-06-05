@@ -13,6 +13,7 @@ SOURCES += \
     adminhomepage.cpp \
     editanewflight.cpp \
     editnewpassenger.cpp \
+    listofflights.cpp \
     main.cpp \
     mainwindow.cpp \
     costoftickets.cpp \
@@ -20,7 +21,13 @@ SOURCES += \
     receipt.cpp \
     planeseats.cpp \
     listsofpassengers.cpp \
-    userhomepage.cpp
+    userhomepage.cpp \
+    availableflights.cpp \
+    editdeletereservation.cpp \
+    flightrejected.cpp \
+    visapayment.cpp \
+    login.cpp \
+    createaccount.cpp
 
 
 HEADERS += \
@@ -28,26 +35,41 @@ HEADERS += \
     adminhomepage.h \
     editanewflight.h \
     editnewpassenger.h \
+    listofflights.h \
     mainwindow.h \
     costoftickets.h \
     edittickets.h \
     receipt.h \
     planeseats.h \
     listsofpassengers.h \
-    userhomepage.h
+    userhomepage.h \
+    availableflights.h \
+    editdeletereservation.h \
+    flightrejected.h \
+    visapayment.h \
+    login.h \
+    createaccount.h
 
 FORMS += \
     addanewflight.ui \
+    addnewpassenger.ui \
     adminhomepage.ui \
     editanewflight.ui \
     editnewpassenger.ui \
+    listofflights.ui \
     mainwindow.ui \
     costoftickets.ui \
     edittickets.ui \
     receipt.ui \
     planeseats.ui \
     listsofpassengers.ui \
-    userhomepage.ui
+    userhomepage.ui \
+    availableflights.ui \
+    editdeletereservation.ui \
+    flightrejected.ui \
+    visapayment.ui \
+    login.ui \
+    createaccount.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
