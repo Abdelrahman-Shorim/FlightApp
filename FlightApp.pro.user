@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <!-- Written by QtCreator 4.14.2, 2021-06-05T16:17:15. -->
+=======
+<!-- Written by QtCreator 4.15.0, 2021-06-05T02:05:40. -->
+<qtcreator>
+ <data>
+  <variable>EnvironmentId</variable>
+  <value type="QByteArray">{6e8217f3-2dbe-4ef7-9062-1232e9febbd0}</value>
+>>>>>>> 5ae607cb8da176eb821f80c5169d955fd0c2126a
 =======
 <!-- Written by QtCreator 4.14.2, 2021-06-05T20:52:06. -->
 >>>>>>> 5bbb274977acdb4ac9894bef39c0eb737e90eee2
@@ -9,6 +17,7 @@
  <data>
   <variable>EnvironmentId</variable>
   <value type="QByteArray">{d547e6f4-cc83-45f7-a558-85dad85069c0}</value>
+>>>>>>> 5bbb274977acdb4ac9894bef39c0eb737e90eee2
  </data>
  <data>
   <variable>ProjectExplorer.Project.ActiveTarget</variable>
@@ -80,7 +89,7 @@
     <value type="bool" key="ClangTools.AnalyzeOpenFiles">true</value>
     <value type="bool" key="ClangTools.BuildBeforeAnalysis">true</value>
     <value type="QString" key="ClangTools.DiagnosticConfig">Builtin.DefaultTidyAndClazy</value>
-    <value type="int" key="ClangTools.ParallelJobs">4</value>
+    <value type="int" key="ClangTools.ParallelJobs">2</value>
     <valuelist type="QVariantList" key="ClangTools.SelectedDirs"/>
     <valuelist type="QVariantList" key="ClangTools.SelectedFiles"/>
     <valuelist type="QVariantList" key="ClangTools.SuppressedDiagnostics"/>
@@ -305,6 +314,10 @@
     <value type="bool" key="RunConfiguration.UseLibrarySearchPath">true</value>
     <value type="bool" key="RunConfiguration.UseQmlDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
+<<<<<<< HEAD
+    <value type="bool" key="RunConfiguration.UseTerminal">true</value>
+=======
+>>>>>>> 5bbb274977acdb4ac9894bef39c0eb737e90eee2
     <value type="QString" key="RunConfiguration.WorkingDirectory.default">C:/FlightApp/build-FlightApp-Desktop_Qt_5_15_2_MinGW_64_bit-Debug</value>
    </valuemap>
    <value type="int" key="ProjectExplorer.Target.RunConfigurationCount">1</value>
