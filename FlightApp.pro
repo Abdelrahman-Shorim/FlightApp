@@ -13,6 +13,7 @@ SOURCES += \
     adminhomepage.cpp \
     editanewflight.cpp \
     editnewpassenger.cpp \
+    listofflights.cpp \
     main.cpp \
     mainwindow.cpp \
     costoftickets.cpp \
@@ -32,6 +33,7 @@ HEADERS += \
     adminhomepage.h \
     editanewflight.h \
     editnewpassenger.h \
+    listofflights.h \
     mainwindow.h \
     costoftickets.h \
     edittickets.h \
@@ -50,6 +52,7 @@ FORMS += \
     adminhomepage.ui \
     editanewflight.ui \
     editnewpassenger.ui \
+    listofflights.ui \
     mainwindow.ui \
     costoftickets.ui \
     edittickets.ui \
