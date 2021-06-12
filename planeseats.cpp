@@ -1,5 +1,6 @@
 #include "planeseats.h"
 #include "ui_planeseats.h"
+#include "costoftickets.h"
 
 PlaneSeats::PlaneSeats(QWidget *parent) :
     QDialog(parent),
@@ -11,4 +12,12 @@ PlaneSeats::PlaneSeats(QWidget *parent) :
 PlaneSeats::~PlaneSeats()
 {
     delete ui;
+}
+
+void PlaneSeats::on_done_clicked()
+{
+    hide();
+    costoftickets t;
+    t.setModal(true);
+    t.exec();
 }

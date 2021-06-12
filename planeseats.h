@@ -15,6 +15,9 @@ public:
     explicit PlaneSeats(QWidget *parent = nullptr);
     ~PlaneSeats();
 
+private slots:
+    void on_done_clicked();
+
 private:
     Ui::PlaneSeats *ui;
 };

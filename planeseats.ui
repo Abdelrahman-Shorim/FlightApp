@@ -607,6 +607,19 @@
     <string>5</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="done">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>250</y>
+     <width>80</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>done</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

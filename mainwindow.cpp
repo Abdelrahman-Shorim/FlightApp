@@ -4,6 +4,7 @@
 #include "edittickets.h"
 #include "planeseats.h"
 #include "addanewflight.h"
+#include "createaccount.h"
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -20,7 +21,7 @@ MainWindow::~MainWindow()
 void MainWindow::on_popup_clicked()
 {
     hide();
-    AddANewFlight abdo;
+    CreateAccount abdo;
     abdo.setModal(true);
     abdo.exec();
 }

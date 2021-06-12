@@ -435,7 +435,7 @@
     <string>CARD NAME</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="toreceit">
    <property name="geometry">
     <rect>
      <x>200</x>
@@ -466,7 +466,7 @@
     <string>EXPIRY DATE</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_3">
+  <widget class="QPushButton" name="backtocostofticket">
    <property name="geometry">
     <rect>
      <x>10</x>

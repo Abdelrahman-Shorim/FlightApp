@@ -15,6 +15,14 @@ public:
     explicit EditNewPassenger(QWidget *parent = nullptr);
     ~EditNewPassenger();
 
+private slots:
+
+    void on_returntosermain_clicked();
+
+    void on_backtousermain_clicked();
+
+    void on_pushButton_2_clicked();
+
 private:
     Ui::EditNewPassenger *ui;
 };

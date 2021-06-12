@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Dialog</class>
- <widget class="QDialog" name="Dialog">
+ <class>addnewpassenger</class>
+ <widget class="QDialog" name="addnewpassenger">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -68,7 +68,7 @@
     <rect>
      <x>30</x>
      <y>120</y>
-     <width>91</width>
+     <width>111</width>
      <height>21</height>
     </rect>
    </property>
@@ -98,7 +98,7 @@
     <rect>
      <x>180</x>
      <y>0</y>
-     <width>181</width>
+     <width>231</width>
      <height>41</height>
     </rect>
    </property>
@@ -115,7 +115,7 @@
     <string>Add a new passenger</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="tousermain">
    <property name="geometry">
     <rect>
      <x>210</x>
@@ -186,7 +186,7 @@ font: 75 11pt &quot;MS Shell Dlg 2&quot;;</string>
     <rect>
      <x>30</x>
      <y>220</y>
-     <width>91</width>
+     <width>111</width>
      <height>16</height>
     </rect>
    </property>
@@ -244,9 +244,9 @@ font: 75 11pt &quot;MS Shell Dlg 2&quot;;</string>
   <widget class="QLabel" name="label_9">
    <property name="geometry">
     <rect>
-     <x>30</x>
+     <x>0</x>
      <y>330</y>
-     <width>141</width>
+     <width>171</width>
      <height>16</height>
     </rect>
    </property>
@@ -264,9 +264,9 @@ font: 75 11pt &quot;MS Shell Dlg 2&quot;;</string>
   <widget class="QLabel" name="label_10">
    <property name="geometry">
     <rect>
-     <x>30</x>
+     <x>10</x>
      <y>430</y>
-     <width>121</width>
+     <width>151</width>
      <height>16</height>
     </rect>
    </property>
@@ -357,6 +357,19 @@ font: 75 11pt &quot;MS Shell Dlg 2&quot;;</string>
    </property>
    <property name="text">
     <string>Delete</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="backtologin">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>10</y>
+     <width>80</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>back</string>
    </property>
   </widget>
  </widget>

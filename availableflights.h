@@ -16,6 +16,11 @@ public:
     ~availableflights();
 
 
+private slots:
+    void on_usermain_clicked();
+
+    void on_book_clicked();
+
 private:
     Ui::availableflights *ui;
 };
