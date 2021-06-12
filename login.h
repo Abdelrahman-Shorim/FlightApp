@@ -15,6 +15,20 @@ public:
     explicit Login(QWidget *parent = nullptr);
     ~Login();
 
+private slots:
+
+    void on_admin_clicked();
+
+    void on_passenger_clicked();
+
+    void on_createaccount_clicked();
+
+
+    void on_loginbtn_clicked();
+
+
+    void on_passwordinput_cursorPositionChanged(int arg1, int arg2);
+
 private:
     Ui::Login *ui;
 };

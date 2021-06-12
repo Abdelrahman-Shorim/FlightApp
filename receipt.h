@@ -15,6 +15,9 @@ public:
     explicit receipt(QWidget *parent = nullptr);
     ~receipt();
 
+private slots:
+    void on_home_clicked();
+
 private:
     Ui::receipt *ui;
 };

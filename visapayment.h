@@ -15,6 +15,11 @@ public:
     explicit VisaPayment(QWidget *parent = nullptr);
     ~VisaPayment();
 
+private slots:
+    void on_toreceit_clicked();
+
+    void on_backtocostofticket_clicked();
+
 private:
     Ui::VisaPayment *ui;
 };

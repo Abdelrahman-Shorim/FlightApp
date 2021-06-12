@@ -10,10 +10,12 @@ CONFIG += c++11
 
 SOURCES += \
     addanewflight.cpp \
+    addnewpassenger.cpp \
     adminhomepage.cpp \
     editanewflight.cpp \
     editnewpassenger.cpp \
     listofflights.cpp \
+    listoftransactions.cpp \
     main.cpp \
     mainwindow.cpp \
     costoftickets.cpp \
@@ -27,15 +29,18 @@ SOURCES += \
     flightrejected.cpp \
     visapayment.cpp \
     login.cpp \
-    createaccount.cpp
+    createaccount.cpp \
+    paymentsuccessful.cpp
 
 
 HEADERS += \
     addanewflight.h \
+    addnewpassenger.h \
     adminhomepage.h \
     editanewflight.h \
     editnewpassenger.h \
     listofflights.h \
+    listoftransactions.h \
     mainwindow.h \
     costoftickets.h \
     edittickets.h \
@@ -48,7 +53,8 @@ HEADERS += \
     flightrejected.h \
     visapayment.h \
     login.h \
-    createaccount.h
+    createaccount.h \
+    paymentsuccessful.h
 
 FORMS += \
     addanewflight.ui \
@@ -57,6 +63,7 @@ FORMS += \
     editanewflight.ui \
     editnewpassenger.ui \
     listofflights.ui \
+    listoftransactions.ui \
     mainwindow.ui \
     costoftickets.ui \
     edittickets.ui \
@@ -69,7 +76,8 @@ FORMS += \
     flightrejected.ui \
     visapayment.ui \
     login.ui \
-    createaccount.ui
+    createaccount.ui \
+    paymentsuccessful.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

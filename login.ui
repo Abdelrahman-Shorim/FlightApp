@@ -41,7 +41,7 @@
     <rect>
      <x>130</x>
      <y>240</y>
-     <width>361</width>
+     <width>381</width>
      <height>171</height>
     </rect>
    </property>
@@ -83,7 +83,7 @@
     <string>Email address</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit">
+  <widget class="QLineEdit" name="emailinput">
    <property name="geometry">
     <rect>
      <x>260</x>
@@ -93,7 +93,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="admin">
    <property name="geometry">
     <rect>
      <x>160</x>
@@ -119,7 +119,7 @@ color : rgb(255, 196, 128)
     <string>Admin</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="createaccount">
    <property name="geometry">
     <rect>
      <x>210</x>
@@ -144,7 +144,7 @@ color : rgb(255, 196, 128)
     <string>Create Account</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_2">
+  <widget class="QLineEdit" name="passwordinput">
    <property name="geometry">
     <rect>
      <x>260</x>
@@ -170,7 +170,7 @@ color : rgb(255, 196, 128)
     <pixmap>../../Users/Hani/Desktop/THE BEST 3 TRAVEL DEALS OF JANUARY TO TRAVEL  FOR LESS MONEY !.jpg</pixmap>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_3">
+  <widget class="QPushButton" name="passenger">
    <property name="geometry">
     <rect>
      <x>320</x>
@@ -219,16 +219,30 @@ color : rgb(29, 110, 144)</string>
     <string>Welcome to Welkin !</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="loginbtn">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>520</y>
+     <width>161</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>login</string>
+   </property>
+  </widget>
   <zorder>label_3</zorder>
   <zorder>label_2</zorder>
   <zorder>groupBox</zorder>
   <zorder>label</zorder>
-  <zorder>lineEdit</zorder>
-  <zorder>pushButton</zorder>
-  <zorder>pushButton_2</zorder>
-  <zorder>lineEdit_2</zorder>
-  <zorder>pushButton_3</zorder>
+  <zorder>emailinput</zorder>
+  <zorder>admin</zorder>
+  <zorder>createaccount</zorder>
+  <zorder>passwordinput</zorder>
+  <zorder>passenger</zorder>
   <zorder>label_4</zorder>
+  <zorder>loginbtn</zorder>
  </widget>
  <resources/>
  <connections/>

@@ -15,6 +15,13 @@ public:
     explicit userhomepage(QWidget *parent = nullptr);
     ~userhomepage();
 
+private slots:
+    void on_editprofile_clicked();
+
+    void on_reservation_clicked();
+
+    void on_bookaflight_clicked();
+
 private:
     Ui::userhomepage *ui;
 };

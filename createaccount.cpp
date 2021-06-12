@@ -1,5 +1,6 @@
 #include "createaccount.h"
 #include "ui_createaccount.h"
+#include "userhomepage.h"
 
 CreateAccount::CreateAccount(QWidget *parent) :
     QDialog(parent),
@@ -11,4 +12,9 @@ CreateAccount::CreateAccount(QWidget *parent) :
 CreateAccount::~CreateAccount()
 {
     delete ui;
+}
+
+void CreateAccount::on_pushButton_clicked()
+{
+
 }

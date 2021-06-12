@@ -17,6 +17,14 @@ public:
 
 private slots:
 
+    void on_backtoavailableflights_clicked();
+
+    void on_cash_clicked();
+
+    void on_visa_clicked();
+
+    void on_seats_clicked();
+
 private:
     Ui::costoftickets *ui;
 };
