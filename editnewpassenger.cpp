@@ -1,9 +1,9 @@
 #include "editnewpassenger.h"
 #include "ui_editnewpassenger.h"
-<<<<<<< HEAD
+//<<<<<<< HEAD
 #include "userhomepage.h"
 
-=======
+//=======
 #include"mainwindow.h"
 #include<iostream>
 #include<QString>
@@ -22,7 +22,7 @@ struct passenger
     int phonenumber;
     int passportnumber;
 };
->>>>>>> 20f6aec90d53ba2546a6b887d4e6d9cb06fa380b
+//>>>>>>> 20f6aec90d53ba2546a6b887d4e6d9cb06fa380b
 EditNewPassenger::EditNewPassenger(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::EditNewPassenger)
@@ -35,7 +35,7 @@ EditNewPassenger::~EditNewPassenger()
     delete ui;
 }
 
-<<<<<<< HEAD
+//<<<<<<< HEAD
 void EditNewPassenger::on_returntosermain_clicked()
 {
     hide();
@@ -50,12 +50,13 @@ void EditNewPassenger::on_backtousermain_clicked()
     userhomepage r;
     r.setModal(true);
     r.exec();
-=======
+}
+//=======
 void EditNewPassenger::on_pushButton_2_clicked()
 {
     passenger x,y;
     x.FN=ui->textEdit->toPlainText().toStdString();
-    x.ID=ui->textEdit_8->toPlainText().toInt();
+    //x.ID=ui->textEdit_8->toPlainText().toInt();
     x.LN=ui->textEdit_2->toPlainText().toStdString();
     x.email=ui->textEdit_3->toPlainText().toStdString();
     x.password=ui->textEdit_4->toPlainText().toStdString();
@@ -73,5 +74,5 @@ void EditNewPassenger::on_pushButton_2_clicked()
             //sed '/REGULAR/d' ./file
         }
     }
->>>>>>> 20f6aec90d53ba2546a6b887d4e6d9cb06fa380b
+//>>>>>>> 20f6aec90d53ba2546a6b887d4e6d9cb06fa380b
 }

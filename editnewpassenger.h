@@ -16,13 +16,12 @@ public:
     ~EditNewPassenger();
 
 private slots:
-<<<<<<< HEAD
+
     void on_returntosermain_clicked();
 
     void on_backtousermain_clicked();
-=======
+
     void on_pushButton_2_clicked();
->>>>>>> 20f6aec90d53ba2546a6b887d4e6d9cb06fa380b
 
 private:
     Ui::EditNewPassenger *ui;

@@ -1,16 +1,16 @@
 #include "mainwindow.h"
-<<<<<<< HEAD
+
 #include "addanewflight.h"
 #include "login.h"
 
-=======
 #include<createaccount.h>
->>>>>>> 20f6aec90d53ba2546a6b887d4e6d9cb06fa380b
+
 #include <QApplication>
 #include<iostream>
 #include<QString>
 #include<QTextEdit>
 #include<iostream>
+#include "editnewpassenger.h"
 using namespace std;
 struct passenger
 {

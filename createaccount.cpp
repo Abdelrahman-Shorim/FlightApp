@@ -1,9 +1,9 @@
 #include "createaccount.h"
 #include "ui_createaccount.h"
-<<<<<<< HEAD
+//<<<<<<< HEAD
 #include "userhomepage.h"
 
-=======
+//=======
 #include"mainwindow.h"
 #include<iostream>
 #include<QString>
@@ -22,7 +22,7 @@ struct passenger
     int phonenumber;
     int passportnumber;
 };
->>>>>>> 20f6aec90d53ba2546a6b887d4e6d9cb06fa380b
+//>>>>>>> 20f6aec90d53ba2546a6b887d4e6d9cb06fa380b
 CreateAccount::CreateAccount(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::CreateAccount)
@@ -37,8 +37,8 @@ CreateAccount::~CreateAccount()
 
 void CreateAccount::on_pushButton_clicked()
 {
-<<<<<<< HEAD
-=======
+//<<<<<<< HEAD
+//=======
     passenger x;
     x.FN=ui->lineEdit->toPlainText().toStdString();
     x.ID=ui->textEdit_2->toPlainText().toInt();
@@ -57,6 +57,6 @@ void CreateAccount::on_pushButton_clicked()
     outbinfile.open("C:\\FlightApp\\passengers.bin",ios::binary);
     outbinfile.write((char*)&x,sizeof (x));
     outbinfile.close();
->>>>>>> 20f6aec90d53ba2546a6b887d4e6d9cb06fa380b
+//>>>>>>> 20f6aec90d53ba2546a6b887d4e6d9cb06fa380b
 
 }
