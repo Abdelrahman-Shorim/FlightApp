@@ -2,6 +2,7 @@
 
 #include "addanewflight.h"
 #include "login.h"
+#include "listsofpassengers.h"
 
 #include<createaccount.h>
 
@@ -27,7 +28,7 @@ struct passenger
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    Login w;
+    ListsofPassengers w;
     w.show();
     return a.exec();
 }
