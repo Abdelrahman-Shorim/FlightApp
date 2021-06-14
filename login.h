@@ -17,9 +17,6 @@ public:
 
 private slots:
 
-    void on_admin_clicked();
-
-    void on_passenger_clicked();
 
     void on_createaccount_clicked();
 

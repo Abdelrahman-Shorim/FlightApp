@@ -6,6 +6,8 @@
 #include "userhomepage.h"
 #include <QLineEdit>
 #include <string>
+#include <QMessageBox>
+#include "createaccount.h"
 using namespace std;
 
 Login::Login(QWidget *parent) :
@@ -21,26 +23,13 @@ Login::~Login()
 }
 
 
-void Login::on_admin_clicked()
-{
-    hide();
-    adminhomepage admin;
-    admin.setModal(true);
-    admin.exec();
-}
 
-void Login::on_passenger_clicked()
-{
-    hide();
-    userhomepage user;
-    user.setModal(true);
-    user.exec();
-}
+
 
 void Login::on_createaccount_clicked()
 {
     hide();
-    addnewpassenger create;
+    CreateAccount create;
     create.setModal(true);
     create.exec();
 }
@@ -49,7 +38,25 @@ void Login::on_createaccount_clicked()
 
 void Login::on_loginbtn_clicked()
 {
-    string x=ui->emailinput->text().toStdString();
+    string name=ui->emailinput->text().toStdString();
+    string pass=ui->passwordinput->text().toStdString();
+
+    if(name=="abdo"&&pass=="321")
+    {
+        hide();
+        adminhomepage admin;
+        admin.setModal(true);
+        admin.exec();
+    }
+    else if(name=="nour"&&pass=="123")
+    {
+        hide();
+        userhomepage user;
+        user.setModal(true);
+        user.exec();
+    }
+    else
+        QMessageBox::information(this,"no account","if u don't have an account please create one",QMessageBox::Ok);
 }
 
 void Login::on_passwordinput_cursorPositionChanged(int arg1, int arg2)

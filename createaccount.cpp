@@ -2,6 +2,7 @@
 #include "ui_createaccount.h"
 //<<<<<<< HEAD
 #include "userhomepage.h"
+#include "login.h"
 
 //=======
 #include"mainwindow.h"
@@ -59,4 +60,20 @@ void CreateAccount::on_pushButton_clicked()
     outbinfile.close();
 //>>>>>>> 20f6aec90d53ba2546a6b887d4e6d9cb06fa380b
 
+}
+
+void CreateAccount::on_tousermain_clicked()
+{
+    hide();
+    userhomepage user;
+    user.setModal(true);
+    user.exec();
+}
+
+void CreateAccount::on_tologin_clicked()
+{
+    hide();
+    Login x;
+    x.setModal(true);
+    x.exec();
 }

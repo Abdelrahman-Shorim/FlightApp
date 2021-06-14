@@ -11,7 +11,8 @@
 #include<QString>
 #include<QTextEdit>
 #include<iostream>
-#include "editnewpassenger.h"
+#include "userhomepage.h"
+#include "adminhomepage.h"
 using namespace std;
 struct passenger
 {
@@ -28,7 +29,7 @@ struct passenger
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    ListsofPassengers w;
+    Login w;
     w.show();
     return a.exec();
 }
