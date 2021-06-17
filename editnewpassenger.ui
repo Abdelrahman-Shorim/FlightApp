@@ -81,7 +81,7 @@
     <string>First name :</string>
    </property>
   </widget>
-  <widget class="QTextEdit" name="textEdit">
+  <widget class="QTextEdit" name="firstname">
    <property name="geometry">
     <rect>
      <x>170</x>
@@ -112,7 +112,7 @@
     <string>Last name :</string>
    </property>
   </widget>
-  <widget class="QTextEdit" name="textEdit_2">
+  <widget class="QTextEdit" name="lastname">
    <property name="geometry">
     <rect>
      <x>170</x>
@@ -222,27 +222,6 @@ font: 12pt &quot;MS Reference Sans Serif&quot;;</string>
     <string>Password :</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_7">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>280</y>
-     <width>191</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>11</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
-     <underline>false</underline>
-    </font>
-   </property>
-   <property name="text">
-    <string>ID :</string>
-   </property>
-  </widget>
   <widget class="QLabel" name="label_8">
    <property name="geometry">
     <rect>
@@ -264,17 +243,7 @@ font: 12pt &quot;MS Reference Sans Serif&quot;;</string>
     <string>Passport number :</string>
    </property>
   </widget>
-  <widget class="QTextEdit" name="textEdit_3">
-   <property name="geometry">
-    <rect>
-     <x>170</x>
-     <y>180</y>
-     <width>171</width>
-     <height>31</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QTextEdit" name="textEdit_4">
+  <widget class="QTextEdit" name="password">
    <property name="geometry">
     <rect>
      <x>170</x>
@@ -284,7 +253,7 @@ font: 12pt &quot;MS Reference Sans Serif&quot;;</string>
     </rect>
    </property>
   </widget>
-  <widget class="QTextEdit" name="textEdit_5">
+  <widget class="QTextEdit" name="passportnumber">
    <property name="geometry">
     <rect>
      <x>170</x>
@@ -315,7 +284,7 @@ font: 12pt &quot;MS Reference Sans Serif&quot;;</string>
     <string>Birth date :</string>
    </property>
   </widget>
-  <widget class="QTextEdit" name="textEdit_6">
+  <widget class="QTextEdit" name="BD">
    <property name="geometry">
     <rect>
      <x>170</x>
@@ -346,7 +315,7 @@ font: 12pt &quot;MS Reference Sans Serif&quot;;</string>
     <string>Phone number :</string>
    </property>
   </widget>
-  <widget class="QTextEdit" name="textEdit_7">
+  <widget class="QTextEdit" name="phonenumber">
    <property name="geometry">
     <rect>
      <x>170</x>
@@ -377,7 +346,6 @@ font: 12pt &quot;MS Reference Sans Serif&quot;;</string>
     <string>Delete </string>
    </property>
   </widget>
-
   <widget class="QPushButton" name="backtousermain">
    <property name="geometry">
     <rect>
@@ -390,8 +358,19 @@ font: 12pt &quot;MS Reference Sans Serif&quot;;</string>
    <property name="text">
     <string>back</string>
    </property>
-
-
+  </widget>
+  <widget class="QLabel" name="email">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>180</y>
+     <width>151</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
   </widget>
  </widget>
  <resources/>

@@ -1,28 +1,33 @@
 #include "createaccount.h"
 #include "ui_createaccount.h"
-//<<<<<<< HEAD
 #include "userhomepage.h"
 #include "login.h"
-//=======
 #include"mainwindow.h"
 #include<iostream>
 #include<QString>
 #include<QTextEdit>
 #include <QLineEdit>
 #include<fstream>
+#include <string.h>
+#include <string>
 using namespace std;
+string FN;
+string LN;
+string email;
+string password;
+string birthdate;
+string phonenumber;
+string passportnumber;
 struct passenger
 {
-    int ID;
-    string FN;
-    string LN;
-    string email;
-    string password;
-    string birthdate;
-    int phonenumber;
-    int passportnumber;
+    char FN[20];
+    char LN[20];
+    char email[20];
+    char password[20];
+    char birthdate[20];
+    char phonenumber[20];
+    char passportnumber[20];
 };
-//>>>>>>> 20f6aec90d53ba2546a6b887d4e6d9cb06fa380b
 CreateAccount::CreateAccount(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::CreateAccount)
@@ -35,34 +40,32 @@ CreateAccount::~CreateAccount()
     delete ui;
 }
 
-void CreateAccount::on_pushButton_clicked()
-{
-//<<<<<<< HEAD
-//=======
-    passenger x;
-    x.FN=ui->lineEdit->toPlainText().toStdString();
-    x.ID=ui->textEdit_2->toPlainText().toInt();
-    x.LN=ui->textEdit->toPlainText().toStdString();
-    x.email=ui->textEdit_3->toPlainText().toStdString();
-    x.password=ui->textEdit_5->toPlainText().toStdString();
-    x.birthdate=ui->textEdit_6->toPlainText().toStdString();
-    x.passportnumber=ui->textEdit_4->toPlainText().toInt();
-    x.phonenumber=ui->textEdit_8->toPlainText().toInt();
-//    ofstream outfile;
-//    outfile.open("C:\\Users\\Dell\\Documents\\nour",ios::app);
-//    outfile<<"first name:"<<x.FN<<"\t"<<"last name:"<<x.LN<<"\t"<<"ID:"<<x.ID<<"\t"<<"email:"<<x.email<<"\t"<<"password:"<<x.password<<"\t";
-//    outfile<<"passport number:"<<x.passportnumber<<"\t"<<"phone number:"<<x.phonenumber<<"\t"<<"birth date:"<<x.birthdate;
-//    outfile.close();
-    ofstream outbinfile;
-    outbinfile.open("C:\\FlightApp\\passengers.bin",ios::binary);
-    outbinfile.write((char*)&x,sizeof (x));
-    outbinfile.close();
-//>>>>>>> 20f6aec90d53ba2546a6b887d4e6d9cb06fa380b
-
-}
 
 void CreateAccount::on_tousermain_clicked()
 {
+    passenger x;
+
+    ofstream outbinfile;
+    outbinfile.open("C:\\FlightApp\\FlightApp\\passenger.bin");
+    strncpy(x.FN,ui->firstname->toPlainText().toStdString().c_str(),sizeof (x.FN));
+    strncpy(x.LN,ui->lastname->toPlainText().toStdString().c_str(),sizeof (x.LN));
+    strncpy(x.email,ui->email->toPlainText().toStdString().c_str(),sizeof (x.email));
+    strncpy(x.password,ui->password->toPlainText().toStdString().c_str(),sizeof (x.password));
+    strncpy(x.birthdate,ui->birthdate->toPlainText().toStdString().c_str(),sizeof (x.birthdate));
+    strncpy(x.phonenumber,ui->phonenumber->toPlainText().toStdString().c_str(),sizeof (x.phonenumber));
+    strncpy(x.passportnumber,ui->passportnumber->toPlainText().toStdString().c_str(),sizeof (x.passportnumber));
+    outbinfile.write((char*)&x,sizeof (x));
+    outbinfile.close();
+
+    FN=ui->firstname->toPlainText().toStdString();
+    LN=ui->lastname->toPlainText().toStdString();
+    email=ui->email->toPlainText().toStdString();
+    password=ui->password->toPlainText().toStdString();
+    birthdate=ui->birthdate->toPlainText().toStdString();
+    phonenumber=ui->phonenumber->toPlainText().toStdString();
+    passportnumber=ui->passportnumber->toPlainText().toStdString();
+
+
     hide();
     userhomepage user;
     user.setModal(true);

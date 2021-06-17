@@ -27,7 +27,7 @@ struct passenger
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    adminhomepage w;
+    userhomepage w;
     w.show();
     return a.exec();
 }

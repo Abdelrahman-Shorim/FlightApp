@@ -16,7 +16,6 @@ public:
     ~CreateAccount();
 
 private slots:
-    void on_pushButton_clicked();
 
     void on_tousermain_clicked();
 
