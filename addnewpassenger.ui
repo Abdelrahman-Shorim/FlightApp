@@ -115,7 +115,7 @@
     <string>Add a new passenger</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="tousermain">
+  <widget class="QPushButton" name="toadmin">
    <property name="geometry">
     <rect>
      <x>210</x>
@@ -362,7 +362,7 @@ font: 75 11pt &quot;MS Shell Dlg 2&quot;;</string>
   <widget class="QPushButton" name="backtologin">
    <property name="geometry">
     <rect>
-     <x>100</x>
+     <x>40</x>
      <y>10</y>
      <width>80</width>
      <height>22</height>

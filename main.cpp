@@ -1,11 +1,9 @@
 #include "mainwindow.h"
-
 #include "addanewflight.h"
 #include "login.h"
 #include "listsofpassengers.h"
-
+#include "adminhomepage.h"
 #include<createaccount.h>
-
 #include <QApplication>
 #include<iostream>
 #include<QString>
@@ -29,7 +27,7 @@ struct passenger
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    Login w;
+    adminhomepage w;
     w.show();
     return a.exec();
 }

@@ -22,10 +22,6 @@ Login::~Login()
     delete ui;
 }
 
-
-
-
-
 void Login::on_createaccount_clicked()
 {
     hide();

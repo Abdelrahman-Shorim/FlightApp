@@ -2,6 +2,8 @@
 #include "ui_addnewpassenger.h"
 #include "userhomepage.h"
 #include "login.h"
+#include "adminhomepage.h"
+#include "addanewflight.h"
 
 addnewpassenger::addnewpassenger(QWidget *parent) :
     QDialog(parent),
@@ -15,19 +17,21 @@ addnewpassenger::~addnewpassenger()
     delete ui;
 }
 
-void addnewpassenger::on_tousermain_clicked()
-{
-    hide();
-    userhomepage h;
-    h.setModal(true);
-    h.exec();
-}
+
 
 void addnewpassenger::on_backtologin_clicked()
 {
     hide();
-    Login l;
+    adminhomepage l;
     l.setModal(true);
     l.exec();
 
+}
+
+void addnewpassenger::on_toadmin_clicked()
+{
+    hide();
+    adminhomepage h;
+    h.setModal(true);
+    h.exec();
 }

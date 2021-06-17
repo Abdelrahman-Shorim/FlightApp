@@ -3,7 +3,6 @@
 //<<<<<<< HEAD
 #include "userhomepage.h"
 #include "login.h"
-
 //=======
 #include"mainwindow.h"
 #include<iostream>

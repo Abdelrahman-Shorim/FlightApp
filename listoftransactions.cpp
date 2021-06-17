@@ -1,5 +1,6 @@
 #include "listoftransactions.h"
 #include "ui_listoftransactions.h"
+#include "adminhomepage.h"
 
 listoftransactions::listoftransactions(QWidget *parent) :
     QDialog(parent),
@@ -11,4 +12,12 @@ listoftransactions::listoftransactions(QWidget *parent) :
 listoftransactions::~listoftransactions()
 {
     delete ui;
+}
+
+void listoftransactions::on_toadminpage_clicked()
+{
+    hide();
+    adminhomepage admin;
+    admin.setModal(true);
+    admin.exec();
 }

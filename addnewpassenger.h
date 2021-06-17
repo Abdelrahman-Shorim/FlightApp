@@ -16,9 +16,10 @@ public:
     ~addnewpassenger();
 
 private slots:
-    void on_tousermain_clicked();
 
     void on_backtologin_clicked();
+
+    void on_toadmin_clicked();
 
 private:
     Ui::addnewpassenger *ui;
