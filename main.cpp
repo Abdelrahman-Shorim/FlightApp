@@ -12,6 +12,7 @@
 #include "userhomepage.h"
 #include "adminhomepage.h"
 using namespace std;
+int code=0;
 struct passenger
 {
     int ID;
@@ -27,7 +28,7 @@ struct passenger
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    userhomepage w;
+    ListsofPassengers w;
     w.show();
     return a.exec();
 }
