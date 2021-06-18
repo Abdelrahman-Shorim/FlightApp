@@ -4,12 +4,22 @@
 #include "addnewpassenger.h"
 #include "adminhomepage.h"
 #include "userhomepage.h"
+#include "mainwindow.h"
 #include <QLineEdit>
 #include <string>
 #include <QMessageBox>
 #include "createaccount.h"
 #include <fstream>
 using namespace std;
+extern int code;
+
+string firstn;
+string lastn;
+string mail;
+string Password;
+string bd;
+string phonenum;
+string passportnum;
 struct passenger
 {
     char FN[20];
@@ -42,6 +52,7 @@ Login::~Login()
 
 void Login::on_createaccount_clicked()
 {
+    code=1;
     hide();
     CreateAccount create;
     create.setModal(true);
@@ -54,9 +65,17 @@ void Login::on_loginbtn_clicked()
 {
     string emailcheck=ui->emailinput->text().toStdString();
     string passcheck=ui->passwordinput->text().toStdString();
+        int key=0;
 
+    if(emailcheck=="abdo"&&passcheck=="321")
+        {
+        key=1;
+            hide();
+            adminhomepage admin;
+            admin.setModal(true);
+            admin.exec();
+        }
     passenger x;
-    int key=0;
         ifstream infile;
         infile.open("C:\\FlightApp\\FlightApp\\passenger.bin");
         while(!infile.eof())
@@ -68,10 +87,19 @@ void Login::on_loginbtn_clicked()
             {
                 //Gemail=email;
                 key=1;
+                firstn=x.FN;
+                lastn=x.LN;
+                mail=x.email;
+                Password=x.password;
+                bd=x.birthdate;
+                phonenum=x.phonenumber;
+                passportnum=x.passportnumber;
+
                 hide();
                 userhomepage user;
                 user.setModal(true);
                 user.exec();
+                break;
             }
         }
         infile.close();

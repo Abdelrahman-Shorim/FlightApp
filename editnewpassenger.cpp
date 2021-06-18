@@ -1,5 +1,6 @@
 #include "editnewpassenger.h"
 #include "ui_editnewpassenger.h"
+#include "login.h"
 #include "userhomepage.h"
 #include"mainwindow.h"
 #include<iostream>
@@ -8,22 +9,36 @@
 #include <QLineEdit>
 #include<fstream>
 using namespace std;
-extern string FN;
-extern string LN;
-extern string email;
-extern string password;
-extern string birthdate;
-extern string phonenumber;
-extern string passportnumber;
+extern int code;
+
+
+
+//data from create
+extern char FN[20];
+extern char LN[20];
+extern char email[20];
+extern char password[20];
+extern char birthdate[20];
+extern char phonenumber[20];
+extern char passportnumber[20];
+
+//data from login
+extern string firstn;
+extern string lastn;
+extern string mail;
+extern string Password;
+extern string bd;
+extern string phonenum;
+extern string passportnum;
 struct passenger
 {
-    string FN;
-    string LN;
-    string email;
-    string password;
-    string birthdate;
-    string phonenumber;
-    string passportnumber;
+    char FN[20];
+    char LN[20];
+    char email[20];
+    char password[20];
+    char birthdate[20];
+    char phonenumber[20];
+    char passportnumber[20];
 };
 //>>>>>>> 20f6aec90d53ba2546a6b887d4e6d9cb06fa380b
 EditNewPassenger::EditNewPassenger(QWidget *parent) :
@@ -32,7 +47,8 @@ EditNewPassenger::EditNewPassenger(QWidget *parent) :
 {
     ui->setupUi(this);
     //converting to Qstring
-        //string phonenum1=to_string(phonenumber);
+    if(code==1)
+    {
         QString fn=QString::fromStdString(FN);
         QString ln=QString::fromStdString(LN);
         QString Email=QString::fromStdString(email);
@@ -40,14 +56,36 @@ EditNewPassenger::EditNewPassenger(QWidget *parent) :
         QString Birthdate=QString::fromStdString(birthdate);
         QString phonenum=QString::fromStdString(phonenumber);
         QString passportnum=QString::fromStdString(passportnumber);
+
         //displaying data
-        /*ui->textEdit->setText(fn);
-        ui->textEdit_2->setText(ln);
-        ui->label_7->setText(Email);
-        ui->textEdit_4->setText(Password);
-        ui->textEdit_6->setText(Birthdate);
-        ui->textEdit_7->setText(phonenum);
-        ui->textEdit_5->setText(passportnum);*/
+        ui->firstname->setText(fn);
+        ui->lastname->setText(ln);
+        ui->email->setText(Email);
+        ui->password->setText(Password);
+        ui->BD->setText(Birthdate);
+        ui->phonenumber->setText(phonenum);
+        ui->passportnumber->setText(passportnum);
+    }
+    else if(code==0)
+    {
+        QString fn=QString::fromStdString(firstn);
+        QString ln=QString::fromStdString(lastn);
+        QString Email=QString::fromStdString(mail);
+        QString Pass=QString::fromStdString(Password);
+        QString Birthdate=QString::fromStdString(bd);
+        QString phone=QString::fromStdString(phonenum);
+        QString passport=QString::fromStdString(passportnum);
+
+        //displaying data
+        ui->firstname->setText(fn);
+        ui->lastname->setText(ln);
+        ui->email->setText(Email);
+        ui->password->setText(Pass);
+        ui->BD->setText(Birthdate);
+        ui->phonenumber->setText(phone);
+        ui->passportnumber->setText(passport);
+    }
+
 }
 
 EditNewPassenger::~EditNewPassenger()
@@ -55,80 +93,66 @@ EditNewPassenger::~EditNewPassenger()
     delete ui;
 }
 
-//<<<<<<< HEAD
 void EditNewPassenger::on_returntosermain_clicked()
 {
     passenger x,y;
-        y.FN=ui->firstname->toPlainText().toStdString();
-        y.LN=ui->lastname->toPlainText().toStdString();
-        y.email=email;
-        y.password=ui->password->toPlainText().toStdString();
-        y.birthdate=ui->BD->toPlainText().toStdString();
-        y.passportnumber=ui->passportnumber->toPlainText().toInt();
-        y.phonenumber=ui->phonenumber->toPlainText().toStdString();
-    //    ofstream outfile;
-    //    outfile.open("C:\\Users\\Dell\\Documents\\nour",ios::app);
-    //    outfile<<endl<<x.ID<<"\t"<<x.FN<<"\t"<<x.LN<<"\t"<<x.email<<"\t"<<x.password<<"\t";
-    //    outfile<<x.birthdate<<"\t"<<x.phonenumber<<"\t"<<x.passportnumber;
-    //    outfile.close();
-    //    ifstream infile;
-    //    ofstream temp;
-    //    infile.open("C:\\Users\\Dell\\Documents\\nour");
-    //    temp.open("C:\\Users\\Dell\\Documents\\temp");
+
+
+    string em;
+    if(code==1)
+        em=email;
+    else if(code==0)
+    {
+        em=mail;
+    }
+        strncpy(y.FN,ui->firstname->toPlainText().toStdString().c_str(),sizeof (y.FN));
+        strncpy(y.LN,ui->lastname->toPlainText().toStdString().c_str(),sizeof (y.LN));
+        strncpy(y.password,ui->password->toPlainText().toStdString().c_str(),sizeof (y.password));
+        strncpy(y.birthdate,ui->BD->toPlainText().toStdString().c_str(),sizeof (y.birthdate));
+        strncpy(y.phonenumber,ui->phonenumber->toPlainText().toStdString().c_str(),sizeof (y.phonenumber));
+        strncpy(y.passportnumber,ui->passportnumber->toPlainText().toStdString().c_str(),sizeof (y.passportnumber));
+        strncpy(y.email,em.c_str(),sizeof(y.email));
+
+
         ifstream infile;
-        infile.open("C:\\FlightApp\\passenger.bin");
+        infile.open("C:\\FlightApp\\FlightApp\\passenger.bin",ios::binary);
         ofstream temp;
-        temp.open("C:\\FlightApp\\temp.bin");
-        //outbinfile.write((char*)&x,sizeof (x));
-    //    y.ID=x.ID;
-    //    y.FN=x.FN;
-    //    y.LN=x.LN;
-    //    y.email=x.email;
-    //    y.password=x.password;
-    //    y.birthdate=x.birthdate;
-    //    y.phonenumber=x.phonenumber;
-    //    y.passportnumber=x.passportnumber;
+        temp.open("C:\\FlightApp\\FlightApp\\temp.bin",ios::binary);
+
         while(!infile.eof())
         {
-                //infile>>x.FN>>x.LN>>x.email>>x.password>>x.birthdate>>x.phonenumber>>x.passportnumber;
                 infile.read((char*)&x,sizeof (x));
-                if(x.email==email)
+                if(x.email==em)
                 {
                     continue;
                 }
                 else
                 {
-                //temp<<endl<<x.FN<<"\t"<<x.LN<<"\t"<<x.email<<"\t"<<x.password<<"\t"<<x.birthdate<<"\t"<<x.phonenumber<<"\t"<<x.passportnumber;
-                temp.write((char*)&x,sizeof (x));
+                    temp.write((char*)&x,sizeof (x));
                 }
         }
         infile.close();
         temp.close();
-    //    ofstream outfile1;
-    //    outfile1.open("C:\\Users\\Dell\\Documents\\nour");
-    //    ifstream temp1;
-    //    temp1.open("C:\\Users\\Dell\\Documents\\temp");
+
         ofstream outfile1;
-        outfile1.open("C:\\FlightApp\\passenger.bin");
+        outfile1.open("C:\\FlightApp\\FlightApp\\passenger.bin",ios::binary);
         ifstream temp1;
-        temp1.open("C:\\FlightApp\\temp.bin");
+        temp1.open("C:\\FlightApp\\FlightApp\\temp.bin",ios::binary);
         while(!temp1.eof())
         {
-            //temp1>>x.FN>>x.LN>>x.email>>x.password>>x.birthdate>>x.phonenumber>>x.passportnumber;
             temp1.read((char*)&x,sizeof (x));
-            //outfile1<<endl<<x.FN<<"\t"<<x.LN<<"\t"<<x.email<<"\t"<<x.password<<"\t"<<x.birthdate<<"\t"<<x.phonenumber<<"\t"<<x.passportnumber;
             outfile1.write((char*)&x,sizeof (x));
         }
-        //outfile1<<endl<<y.FN<<"\t"<<y.LN<<"\t"<<email<<"\t"<<y.password<<"\t"<<y.birthdate<<"\t"<<y.phonenumber<<"\t"<<y.passportnumber;
         outfile1.write((char*)&y,sizeof (y));
         temp1.close();
         outfile1.close();
 
 
-    hide();
+    close();
     userhomepage r;
     r.setModal(true);
     r.exec();
+
 }
 
 void EditNewPassenger::on_backtousermain_clicked()

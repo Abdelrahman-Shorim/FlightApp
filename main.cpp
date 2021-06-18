@@ -13,6 +13,7 @@
 #include "adminhomepage.h"
 #include "costoftickets.h"
 using namespace std;
+int code=0;
 struct passenger
 {
     int ID;
@@ -28,7 +29,11 @@ struct passenger
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
+<<<<<<< HEAD
     costoftickets w;
+=======
+    ListsofPassengers w;
+>>>>>>> 2dc3a90742454cb9555665a9f4f849ddfbe747ef
     w.show();
     return a.exec();
 }
