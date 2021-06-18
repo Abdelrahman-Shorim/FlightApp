@@ -11,6 +11,7 @@
 #include<iostream>
 #include "userhomepage.h"
 #include "adminhomepage.h"
+#include "costoftickets.h"
 using namespace std;
 struct passenger
 {
@@ -27,7 +28,7 @@ struct passenger
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    userhomepage w;
+    costoftickets w;
     w.show();
     return a.exec();
 }
