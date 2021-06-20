@@ -109,19 +109,6 @@ void EditANewFlight::on_add_clicked()
 void EditANewFlight::on_delete_2_clicked()
 {
     flights y;
-//       strncpy(x.depcountry,ui->depcountry->toPlainText().toStdString().c_str(),sizeof (x.depcountry));
-//       strncpy(x.destcountry,ui->destcountry->toPlainText().toStdString().c_str(),sizeof (x.destcountry));
-//       strncpy(x.depdate,ui->depdate->toPlainText().toStdString().c_str(),sizeof (x.depdate));
-//       strncpy(x.arrdate,ui->arrivaldate->toPlainText().toStdString().c_str(),sizeof(x.arrdate));
-//       strncpy(x.deptime,ui->deptime->toPlainText().toStdString().c_str(),sizeof(x.deptime));
-//       strncpy(x.arrtime,ui->arrivaltime->toPlainText().toStdString().c_str(),sizeof(x.arrtime));
-//       strncpy(x.planenum,ui->planenumber->toPlainText().toStdString().c_str(),sizeof(x.planenum));
-//       strncpy(x.travcompany,ui->travelcompany->toPlainText().toStdString().c_str(),sizeof(x.travcompany));
-//       strncpy(x.duration,ui->duration->toPlainText().toStdString().c_str(),sizeof(x.duration));
-//       strncpy(x.economy,ui->economy->toPlainText().toStdString().c_str(),sizeof(x.economy));
-//       strncpy(x.business,ui->business->toPlainText().toStdString().c_str(),sizeof(x.business));
-//       strncpy(x.adult,ui->adult->toPlainText().toStdString().c_str(),sizeof(x.adult));
-//       strncpy(x.child,ui->child->toPlainText().toStdString().c_str(),sizeof(x.child));
 
        ifstream infile;
        infile.open("C:\\FlightApp\\FlightApp\\flights.bin");

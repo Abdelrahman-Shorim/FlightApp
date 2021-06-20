@@ -82,10 +82,6 @@ void addnewpassenger::on_toadmin_clicked()
     strncpy(y.birthdate,ui->birthdate->toPlainText().toStdString().c_str(),sizeof (y.birthdate));
     strncpy(y.phonenumber,ui->phonenumber->toPlainText().toStdString().c_str(),sizeof (y.phonenumber));
     strncpy(y.passportnumber,ui->passportnumber->toPlainText().toStdString().c_str(),sizeof (y.passportnumber));
-    //ofstream outbinfile;
-    //outbinfile.open("C:\\FlightApp\\FlightApp\\passenger.bin",ios::app);
-    //outbinfile.write((char*)&y,sizeof (y));
-    //outbinfile.close();
 
 
     ifstream infile;
@@ -95,7 +91,6 @@ void addnewpassenger::on_toadmin_clicked()
 
     while(infile.read((char*)&x,sizeof (x)))
     {
-            //infile.read((char*)&x,sizeof (x));
             if(x.email==required)
             {
                 continue;
@@ -139,7 +134,6 @@ void addnewpassenger::on_delete_2_clicked()
 
         while(infile.read((char*)&x,sizeof (x)))
         {
-                //infile.read((char*)&x,sizeof (x));
                 if(x.email==required)
                 {
                     continue;

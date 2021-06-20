@@ -3,6 +3,9 @@
 #include "receipt.h"
 #include "ui_receipt.h"
 #include "userhomepage.h"
+#include "availableflights.h"
+#include "costoftickets.h"
+#include "login.h"
 #include <QDataStream>
 #include <fstream>
 #include <iostream>
@@ -18,14 +21,55 @@
 #include <QFrame>
 #include "QFileDialog"
 #include <QWidget>
-
-
-
+using namespace std;
+struct flights
+{
+    char depcountry[20];
+    char destcountry[20];
+    char depdate[20];
+    char arrdate[20];
+    char deptime[20];
+    char arrtime[20];
+    char planenum[20];
+    char travcompany[20];
+    char duration[20];
+    char economy[20];
+    char business[20];
+    char adult[20];
+    char child[20];
+};
+extern string planenumber;
+extern string payment;
+extern string mail;
+extern char email[20];
+extern int code;
 receipt::receipt(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::receipt)
 {
     ui->setupUi(this);
+    flights x;
+    ifstream infile;
+    infile.open("C:\\FlightApp\\FlightApp\\flights.bin");
+    while(infile.read((char*)&x,sizeof(x)))
+    {
+        if(planenumber==x.planenum)
+        {
+            ui->ticketnumber->setText(x.planenum);
+            ui->date->setText(x.depdate);
+            ui->depfrom->setText(x.depcountry);
+            ui->destination->setText(x.destcountry);
+        }
+    }
+    if(code==1)
+    {
+        ui->passengeremail->setText(email);
+    }
+    else if(code==0)
+    {
+        ui->passengeremail->setText(mail.c_str());
+    }
+    ui->payment->setText(payment.c_str());
 
 }
 
@@ -41,22 +85,6 @@ void receipt::on_home_clicked()
     h.setModal(true);
     h.exec();
 }
-
-/*
-    struct Receipt
-    {
-       QString Name  ;
-       int ticketnum ;
-       QString date ;
-       QString depart ;
-       QString head ;
-       QString Fclass  ;
-       float total;
-       QString formofpay  ;
-       QString seat ;
-
-    };
-    */
     void receipt::on_pushButton_2_clicked()
 
     {
