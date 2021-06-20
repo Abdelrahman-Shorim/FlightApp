@@ -1,4 +1,5 @@
 #include "addnewpassenger.h"
+#include "listsofpassengers.h"
 #include "ui_addnewpassenger.h"
 #include "userhomepage.h"
 #include "login.h"
@@ -6,6 +7,10 @@
 #include "addanewflight.h"
 #include <fstream>
 using namespace std;
+
+extern string required;
+extern int noeditdata;
+
 struct passenger
 {
     char FN[20];
@@ -22,6 +27,30 @@ addnewpassenger::addnewpassenger(QWidget *parent) :
     ui(new Ui::addnewpassenger)
 {
     ui->setupUi(this);
+
+
+    if(noeditdata==0)
+    {
+        passenger x;
+
+        ifstream input;
+        input.open("C:\\FlightApp\\FlightApp\\passenger.bin",ios::binary);
+        while(input.read((char*)&x,sizeof (x)))
+        {
+            if(required==x.email)
+            {
+                ui->firstname->setText(x.FN);
+                ui->lastname->setText(x.LN);
+                ui->email->setText(x.email);
+                ui->password->setText(x.password);
+                ui->birthdate->setText(x.birthdate);
+                ui->phonenumber->setText(x.phonenumber);
+                ui->passportnumber->setText(x.passportnumber);
+            }
+        }
+            input.close();
+    }
+
 }
 
 addnewpassenger::~addnewpassenger()
@@ -34,7 +63,7 @@ addnewpassenger::~addnewpassenger()
 void addnewpassenger::on_backtologin_clicked()
 {
     hide();
-    adminhomepage l;
+    ListsofPassengers l;
     l.setModal(true);
     l.exec();
 
@@ -42,31 +71,100 @@ void addnewpassenger::on_backtologin_clicked()
 
 void addnewpassenger::on_toadmin_clicked()
 {
-    passenger x;
-//        x.FN=ui->firstname->toPlainText().toStdString();
-//        x.LN=ui->lastname->toPlainText().toStdString();
-//        x.email=ui->email->toPlainText().toStdString();
-//        x.password=ui->password->toPlainText().toStdString();
-//        x.birthdate=ui->birthdate->toPlainText().toStdString();
-//        x.passportnumber=ui->passportnumber->toPlainText().toStdString();
-//        x.phonenumber=ui->phonenumber->toPlainText().toStdString();
 
-        ofstream outfile;
-        strncpy(x.FN,ui->firstname->toPlainText().toStdString().c_str(),sizeof (x.FN));
-        strncpy(x.LN,ui->lastname->toPlainText().toStdString().c_str(),sizeof (x.LN));
-        strncpy(x.email,ui->email->toPlainText().toStdString().c_str(),sizeof (x.email));
-        strncpy(x.password,ui->password->toPlainText().toStdString().c_str(),sizeof (x.password));
-        strncpy(x.birthdate,ui->birthdate->toPlainText().toStdString().c_str(),sizeof (x.birthdate));
-        strncpy(x.phonenumber,ui->phonenumber->toPlainText().toStdString().c_str(),sizeof (x.phonenumber));
-        strncpy(x.passportnumber,ui->passportnumber->toPlainText().toStdString().c_str(),sizeof (x.passportnumber));
-    //    outfile.open("C:\\Users\\Dell\\Documents\\nour",ios::app);
-    //    outfile<<endl<<x.FN<<"\t"<<x.LN<<"\t"<<x.email<<"\t"<<x.password<<"\t";
-    //    outfile<<x.birthdate<<"\t"<<x.phonenumber<<"\t"<<x.passportnumber;
-        outfile.open("C:\\FlightApp\\FlightApp\\passenger.bin",ios::app);
-        outfile.write((char*)&x,sizeof (x));
-        outfile.close();
+    passenger x,y;
+
+
+    strncpy(y.FN,ui->firstname->toPlainText().toStdString().c_str(),sizeof (y.FN));
+    strncpy(y.LN,ui->lastname->toPlainText().toStdString().c_str(),sizeof (y.LN));
+    strncpy(y.email,ui->email->toPlainText().toStdString().c_str(),sizeof (y.email));
+    strncpy(y.password,ui->password->toPlainText().toStdString().c_str(),sizeof (y.password));
+    strncpy(y.birthdate,ui->birthdate->toPlainText().toStdString().c_str(),sizeof (y.birthdate));
+    strncpy(y.phonenumber,ui->phonenumber->toPlainText().toStdString().c_str(),sizeof (y.phonenumber));
+    strncpy(y.passportnumber,ui->passportnumber->toPlainText().toStdString().c_str(),sizeof (y.passportnumber));
+    //ofstream outbinfile;
+    //outbinfile.open("C:\\FlightApp\\FlightApp\\passenger.bin",ios::app);
+    //outbinfile.write((char*)&y,sizeof (y));
+    //outbinfile.close();
+
+
+    ifstream infile;
+    infile.open("C:\\FlightApp\\FlightApp\\passenger.bin",ios::binary);
+    ofstream temp;
+    temp.open("C:\\FlightApp\\FlightApp\\temp.bin",ios::binary);
+
+    while(infile.read((char*)&x,sizeof (x)))
+    {
+            //infile.read((char*)&x,sizeof (x));
+            if(x.email==required)
+            {
+                continue;
+            }
+            else
+            {
+                temp.write((char*)&x,sizeof (x));
+            }
+    }
+    infile.close();
+    temp.close();
+
+    ofstream outfile1;
+    outfile1.open("C:\\FlightApp\\FlightApp\\passenger.bin",ios::binary);
+    ifstream temp1;
+    temp1.open("C:\\FlightApp\\FlightApp\\temp.bin",ios::binary);
+    while(temp1.read((char*)&x,sizeof (x)))
+    {
+        outfile1.write((char*)&x,sizeof (x));
+    }
+    outfile1.write((char*)&y,sizeof (y));
+    temp1.close();
+    outfile1.close();
+
+
     hide();
-    adminhomepage h;
+    ListsofPassengers h;
     h.setModal(true);
     h.exec();
+}
+
+void addnewpassenger::on_delete_2_clicked()
+{
+    passenger x;
+
+
+        ifstream infile;
+        infile.open("C:\\FlightApp\\FlightApp\\passenger.bin",ios::binary);
+        ofstream temp;
+        temp.open("C:\\FlightApp\\FlightApp\\temp.bin",ios::binary);
+
+        while(infile.read((char*)&x,sizeof (x)))
+        {
+                //infile.read((char*)&x,sizeof (x));
+                if(x.email==required)
+                {
+                    continue;
+                }
+                else
+                {
+                    temp.write((char*)&x,sizeof (x));
+                }
+        }
+        infile.close();
+        temp.close();
+
+        ofstream outfile1;
+        outfile1.open("C:\\FlightApp\\FlightApp\\passenger.bin",ios::binary);
+        ifstream temp1;
+        temp1.open("C:\\FlightApp\\FlightApp\\temp.bin",ios::binary);
+        while(temp1.read((char*)&x,sizeof (x)))
+        {
+            outfile1.write((char*)&x,sizeof (x));
+        }
+        temp1.close();
+        outfile1.close();
+        hide();
+        ListsofPassengers h;
+        h.setModal(true);
+        h.exec();
+
 }

@@ -20,6 +20,8 @@ private slots:
 
     void on_toaddnewpassenger_clicked();
 
+    void on_editpassenger_clicked();
+
 private:
     Ui::ListsofPassengers *ui;
 };

@@ -4,7 +4,11 @@
 #include "addnewpassenger.h"
 #include <string.h>
 #include <fstream>
+#include <QMessageBox>
+//#include
 using namespace std;
+string required;
+int noeditdata;
 struct passenger
 {
     char FN[20];
@@ -24,11 +28,11 @@ ListsofPassengers::ListsofPassengers(QWidget *parent) :
     passenger x;
         ifstream infile;
         infile.open("C:\\FlightApp\\FlightApp\\passenger.bin",ios::binary);
-        while(!infile.eof())
+        while(infile.read((char*)&x,sizeof (x)))
         {
-            infile.read((char*)&x,sizeof (x));
-            string name=x.LN;
-            string email=x.email;
+            //infile.read((char*)&x,sizeof (x));
+            string name=x.email;
+            string email=x.password;
             string all=name+"    "+email;
             ui->listWidget->addItem(QString::fromStdString(all));
 
@@ -51,6 +55,20 @@ void ListsofPassengers::on_backtoadmin_clicked()
 
 void ListsofPassengers::on_toaddnewpassenger_clicked()
 {
+    noeditdata=1;
+    hide();
+    addnewpassenger add;
+    add.setModal(true);
+    add.exec();
+}
+
+void ListsofPassengers::on_editpassenger_clicked()
+{
+    noeditdata=0;
+    required=ui->listWidget->currentItem()->text().toStdString();
+    string m=required.substr(0,required.find(" "));
+    required=m;
+
     hide();
     addnewpassenger add;
     add.setModal(true);

@@ -21,6 +21,8 @@ private slots:
 
     void on_toadmin_clicked();
 
+    void on_delete_2_clicked();
+
 private:
     Ui::addnewpassenger *ui;
 };
