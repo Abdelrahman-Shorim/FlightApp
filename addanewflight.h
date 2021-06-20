@@ -16,9 +16,10 @@ public:
     ~AddANewFlight();
 
 private slots:
-    void on_toadmin_clicked();
 
-    void on_toadmin_2_clicked();
+    void on_add_clicked();
+
+    void on_back_clicked();
 
 private:
     Ui::AddANewFlight *ui;

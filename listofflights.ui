@@ -27,6 +27,13 @@
       <widget class="QListWidget" name="listWidget"/>
      </item>
      <item>
+      <widget class="QPushButton" name="addnewflight">
+       <property name="text">
+        <string>add new flight</string>
+       </property>
+      </widget>
+     </item>
+     <item>
       <widget class="QPushButton" name="editpassenger">
        <property name="text">
         <string>Edit</string>

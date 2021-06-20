@@ -15,6 +15,8 @@ public:
     explicit editdeletereservation(QWidget *parent = nullptr);
     ~editdeletereservation();
 
+private slots:
+
 private:
     Ui::editdeletereservation *ui;
 };

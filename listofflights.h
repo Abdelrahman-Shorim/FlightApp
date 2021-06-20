@@ -20,6 +20,8 @@ private slots:
 
     void on_toadminpage_clicked();
 
+    void on_addnewflight_clicked();
+
 private:
     Ui::listofflights *ui;
 };

@@ -54,7 +54,7 @@
     <string>Destination country  :</string>
    </property>
   </widget>
-  <widget class="QTextEdit" name="textEdit">
+  <widget class="QTextEdit" name="depdate">
    <property name="geometry">
     <rect>
      <x>200</x>
@@ -84,7 +84,7 @@
     <string>Travel company :</string>
    </property>
   </widget>
-  <widget class="QTextEdit" name="textEdit_2">
+  <widget class="QTextEdit" name="depcountry">
    <property name="geometry">
     <rect>
      <x>200</x>
@@ -99,7 +99,7 @@
     <rect>
      <x>20</x>
      <y>200</y>
-     <width>121</width>
+     <width>141</width>
      <height>16</height>
     </rect>
    </property>
@@ -114,7 +114,7 @@
     <string>Plane number :</string>
    </property>
   </widget>
-  <widget class="QTextEdit" name="textEdit_3">
+  <widget class="QTextEdit" name="deptime">
    <property name="geometry">
     <rect>
      <x>200</x>
@@ -124,7 +124,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="add">
    <property name="geometry">
     <rect>
      <x>310</x>
@@ -142,7 +142,7 @@
     <string>Done</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="delete_2">
    <property name="geometry">
     <rect>
      <x>624</x>
@@ -276,26 +276,6 @@
     <string>Ticket price according to class :</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_11">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>500</y>
-     <width>101</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>11</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
-    </font>
-   </property>
-   <property name="text">
-    <string>First class :</string>
-   </property>
-  </widget>
   <widget class="QLabel" name="label_12">
    <property name="geometry">
     <rect>
@@ -397,7 +377,7 @@
     <string>Adult :</string>
    </property>
   </widget>
-  <widget class="QTextEdit" name="textEdit_4">
+  <widget class="QTextEdit" name="travelcompany">
    <property name="geometry">
     <rect>
      <x>200</x>
@@ -407,7 +387,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QTextEdit" name="textEdit_5">
+  <widget class="QTextEdit" name="business">
    <property name="geometry">
     <rect>
      <x>200</x>
@@ -417,7 +397,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QTextEdit" name="textEdit_6">
+  <widget class="QTextEdit" name="planenumber">
    <property name="geometry">
     <rect>
      <x>200</x>
@@ -427,7 +407,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QTextEdit" name="textEdit_7">
+  <widget class="QTextEdit" name="duration">
    <property name="geometry">
     <rect>
      <x>200</x>
@@ -437,7 +417,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QTextEdit" name="textEdit_8">
+  <widget class="QTextEdit" name="adult">
    <property name="geometry">
     <rect>
      <x>120</x>
@@ -447,7 +427,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QTextEdit" name="textEdit_9">
+  <widget class="QTextEdit" name="economy">
    <property name="geometry">
     <rect>
      <x>200</x>
@@ -457,7 +437,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QTextEdit" name="textEdit_10">
+  <widget class="QTextEdit" name="arrivaltime">
    <property name="geometry">
     <rect>
      <x>550</x>
@@ -467,17 +447,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QTextEdit" name="textEdit_11">
-   <property name="geometry">
-    <rect>
-     <x>200</x>
-     <y>490</y>
-     <width>141</width>
-     <height>31</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QTextEdit" name="textEdit_12">
+  <widget class="QTextEdit" name="destcountry">
    <property name="geometry">
     <rect>
      <x>550</x>
@@ -487,7 +457,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QTextEdit" name="textEdit_13">
+  <widget class="QTextEdit" name="arrivaldate">
    <property name="geometry">
     <rect>
      <x>550</x>
@@ -517,27 +487,7 @@
     <string>Child :</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_18">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>680</y>
-     <width>71</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>11</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
-    </font>
-   </property>
-   <property name="text">
-    <string>Infant :</string>
-   </property>
-  </widget>
-  <widget class="QTextEdit" name="textEdit_14">
+  <widget class="QTextEdit" name="child">
    <property name="geometry">
     <rect>
      <x>120</x>
@@ -547,14 +497,17 @@
     </rect>
    </property>
   </widget>
-  <widget class="QTextEdit" name="textEdit_15">
+  <widget class="QPushButton" name="back">
    <property name="geometry">
     <rect>
-     <x>120</x>
-     <y>670</y>
-     <width>141</width>
-     <height>31</height>
+     <x>40</x>
+     <y>0</y>
+     <width>93</width>
+     <height>28</height>
     </rect>
+   </property>
+   <property name="text">
+    <string>back</string>
    </property>
   </widget>
  </widget>

@@ -15,6 +15,14 @@ public:
     explicit EditANewFlight(QWidget *parent = nullptr);
     ~EditANewFlight();
 
+private slots:
+
+    void on_add_clicked();
+
+    void on_delete_2_clicked();
+
+    void on_back_clicked();
+
 private:
     Ui::EditANewFlight *ui;
 };
