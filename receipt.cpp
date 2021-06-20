@@ -42,7 +42,7 @@ void receipt::on_home_clicked()
     h.exec();
 }
 
-
+/*
     struct Receipt
     {
        QString Name  ;
@@ -56,11 +56,12 @@ void receipt::on_home_clicked()
        QString seat ;
 
     };
+    */
     void receipt::on_pushButton_2_clicked()
 
     {
 
-    //void data()
+    /*void data()
     //{
         Receipt datareceipt ;
          datareceipt.Name = "Nancy Hany Tawfik" ;
@@ -109,6 +110,7 @@ void receipt::on_home_clicked()
           R.exec();
         }
     }
+    */
     }
 
 

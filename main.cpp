@@ -12,6 +12,8 @@
 #include "userhomepage.h"
 #include "adminhomepage.h"
 #include "costoftickets.h"
+#include "listofflights.h"
+#include "receipt.h"
 using namespace std;
 int code=0;
 struct passenger
@@ -29,8 +31,7 @@ struct passenger
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    costoftickets w;
-    //ListsofPassengers w;
+    receipt w;
     w.show();
     return a.exec();
 }
