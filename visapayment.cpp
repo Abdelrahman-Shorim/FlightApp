@@ -2,6 +2,17 @@
 #include "ui_visapayment.h"
 #include "receipt.h"
 #include "costoftickets.h"
+#include "receipt.h"
+#include "ui_receipt.h"
+#include "userhomepage.h"
+#include <QDataStream>
+#include <fstream>
+#include <iostream>
+#include <QLabel>
+#include <QString>
+#include <string>
+#include <QFile>
+#include <QDate>
 
 VisaPayment::VisaPayment(QWidget *parent) :
     QDialog(parent),
@@ -21,6 +32,7 @@ void VisaPayment::on_toreceit_clicked()
     receipt r;
     r.setModal(true);
     r.exec();
+
 }
 
 void VisaPayment::on_backtocostofticket_clicked()
