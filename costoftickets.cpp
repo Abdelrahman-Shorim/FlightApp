@@ -4,12 +4,23 @@
 #include "receipt.h"
 #include "visapayment.h"
 #include "planeseats.h"
+#include <QLabel>
+#include<iostream>
+#include<QString>
+#include<QTextEdit>
+#include <QLineEdit>
+#include<fstream>
+using namespace std;
+
+string selected_seat;
 
 costoftickets::costoftickets(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::costoftickets)
 {
     ui->setupUi(this);
+
+    ui->chosen_seat->setText(QString::fromStdString(selected_seat));
 }
 
 costoftickets::~costoftickets()

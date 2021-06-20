@@ -214,14 +214,27 @@
   <widget class="QLabel" name="label_6">
    <property name="geometry">
     <rect>
-     <x>380</x>
-     <y>170</y>
+     <x>200</x>
+     <y>10</y>
      <width>55</width>
      <height>16</height>
     </rect>
    </property>
    <property name="text">
     <string>A2</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="chosen_seat">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>170</y>
+     <width>47</width>
+     <height>14</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
    </property>
   </widget>
  </widget>
