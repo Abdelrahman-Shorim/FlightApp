@@ -24,10 +24,9 @@ ListsofPassengers::ListsofPassengers(QWidget *parent) :
     passenger x;
         ifstream infile;
         infile.open("C:\\FlightApp\\FlightApp\\passenger.bin",ios::binary);
-        while(!infile.eof())
+        while(infile.read((char*)&x,sizeof (x)))
         {
-            infile.read((char*)&x,sizeof (x));
-            string name=x.LN;
+            string name=x.FN;
             string email=x.email;
             string all=name+"    "+email;
             ui->listWidget->addItem(QString::fromStdString(all));

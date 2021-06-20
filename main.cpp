@@ -28,7 +28,8 @@ struct passenger
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    ListsofPassengers w;
+    Login w;
+    //ListsofPassengers w;
     w.show();
     return a.exec();
 }
