@@ -15,6 +15,11 @@ public:
     explicit AddANewFlight(QWidget *parent = nullptr);
     ~AddANewFlight();
 
+private slots:
+    void on_toadmin_clicked();
+
+    void on_toadmin_2_clicked();
+
 private:
     Ui::AddANewFlight *ui;
 };

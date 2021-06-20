@@ -15,6 +15,9 @@ public:
     explicit listoftransactions(QWidget *parent = nullptr);
     ~listoftransactions();
 
+private slots:
+    void on_toadminpage_clicked();
+
 private:
     Ui::listoftransactions *ui;
 };

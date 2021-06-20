@@ -4,9 +4,39 @@
 #include "addnewpassenger.h"
 #include "adminhomepage.h"
 #include "userhomepage.h"
+#include "mainwindow.h"
 #include <QLineEdit>
 #include <string>
+#include <QMessageBox>
+#include "createaccount.h"
+#include <fstream>
 using namespace std;
+extern int code;
+
+string firstn;
+string lastn;
+string mail;
+string Password;
+string bd;
+string phonenum;
+string passportnum;
+struct passenger
+{
+    char FN[20];
+    char LN[20];
+    char email[20];
+    char password[20];
+    char birthdate[20];
+    char phonenumber[20];
+    char passportnumber[20];
+};
+ //string FN;
+ //string LN;
+ //string Gemail;
+ //string password;
+ //string birthdate;
+ //string phonenumber;
+ //string passportnumber;
 
 Login::Login(QWidget *parent) :
     QDialog(parent),
@@ -20,27 +50,11 @@ Login::~Login()
     delete ui;
 }
 
-
-void Login::on_admin_clicked()
-{
-    hide();
-    adminhomepage admin;
-    admin.setModal(true);
-    admin.exec();
-}
-
-void Login::on_passenger_clicked()
-{
-    hide();
-    userhomepage user;
-    user.setModal(true);
-    user.exec();
-}
-
 void Login::on_createaccount_clicked()
 {
+    code=1;
     hide();
-    addnewpassenger create;
+    CreateAccount create;
     create.setModal(true);
     create.exec();
 }
@@ -49,7 +63,69 @@ void Login::on_createaccount_clicked()
 
 void Login::on_loginbtn_clicked()
 {
-    string x=ui->emailinput->text().toStdString();
+    string emailcheck=ui->emailinput->text().toStdString();
+    string passcheck=ui->passwordinput->text().toStdString();
+        //int key=1;
+/*
+    if(emailcheck=="abdo"&&passcheck=="321")
+        {
+        key=1;
+            hide();
+            adminhomepage admin;
+            admin.setModal(true);
+            admin.exec();
+        }
+        */
+    passenger x;
+        ifstream infile;
+        infile.open("C:\\FlightApp\\FlightApp\\passenger.bin");
+        while(!infile.eof())
+        {
+            infile.read((char*)&x,sizeof (x));
+            string email=x.email;
+            string pass=x.password;
+            if(emailcheck==email&&pass==passcheck)
+            {
+                //Gemail=email;
+                //key=1;
+                firstn=x.FN;
+                lastn=x.LN;
+                mail=x.email;
+                Password=x.password;
+                bd=x.birthdate;
+                phonenum=x.phonenumber;
+                passportnum=x.passportnumber;
+
+                hide();
+                userhomepage user;
+                user.setModal(true);
+                user.exec();
+                break;
+            }
+        }
+        infile.close();
+        //if(key==0)
+            //QMessageBox::information(this,"no account","if u don't have an account please create one",QMessageBox::Ok);
+
+
+
+    /*if(name=="abdo"&&pass=="321")
+    {
+        hide();
+        adminhomepage admin;
+        admin.setModal(true);
+        admin.exec();
+    }
+    else if(name=="nour"&&pass=="123")
+    {
+        hide();
+        userhomepage user;
+        user.setModal(true);
+        user.exec();
+    }
+    else
+        QMessageBox::information(this,"no account","if u don't have an account please create one",QMessageBox::Ok);
+        */
 }
 
 void Login::on_passwordinput_cursorPositionChanged(int arg1, int arg2)

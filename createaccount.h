@@ -16,7 +16,10 @@ public:
     ~CreateAccount();
 
 private slots:
-    void on_pushButton_clicked();
+
+    void on_tousermain_clicked();
+
+    void on_tologin_clicked();
 
 private:
     Ui::CreateAccount *ui;

@@ -15,6 +15,11 @@ public:
     explicit listofflights(QWidget *parent = nullptr);
     ~listofflights();
 
+private slots:
+    void on_editpassenger_clicked();
+
+    void on_toadminpage_clicked();
+
 private:
     Ui::listofflights *ui;
 };

@@ -1,17 +1,19 @@
 #include "mainwindow.h"
-
 #include "addanewflight.h"
 #include "login.h"
-
+#include "listsofpassengers.h"
+#include "adminhomepage.h"
 #include<createaccount.h>
-
 #include <QApplication>
 #include<iostream>
 #include<QString>
 #include<QTextEdit>
 #include<iostream>
-#include "editnewpassenger.h"
+#include "userhomepage.h"
+#include "adminhomepage.h"
+#include "costoftickets.h"
 using namespace std;
+int code=0;
 struct passenger
 {
     int ID;
@@ -27,7 +29,8 @@ struct passenger
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    Login w;
+    //Login w;
+    ListsofPassengers w;
     w.show();
     return a.exec();
 }
