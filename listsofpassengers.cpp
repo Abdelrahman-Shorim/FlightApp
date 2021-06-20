@@ -5,7 +5,6 @@
 #include <string.h>
 #include <fstream>
 #include <QMessageBox>
-//#include
 using namespace std;
 string required;
 int noeditdata;
@@ -30,8 +29,14 @@ ListsofPassengers::ListsofPassengers(QWidget *parent) :
         infile.open("C:\\FlightApp\\FlightApp\\passenger.bin",ios::binary);
         while(infile.read((char*)&x,sizeof (x)))
         {
+<<<<<<< HEAD
             string email=x.email;
             string all=email+"   "+x.FN+"   "+x.LN;
+=======
+            string name=x.email;
+            string email=x.password;
+            string all=name+"    "+email+"     "+x.LN;
+>>>>>>> 9abdc5a1b97d482d79faa7c623634e013a08c1a2
             ui->listWidget->addItem(QString::fromStdString(all));
 
         }

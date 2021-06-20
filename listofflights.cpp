@@ -50,9 +50,6 @@ listofflights::listofflights(QWidget *parent) :
             string business=x.business;
             string adult=x.adult;
             string child=x.child;
-            //string all=depcountry+"  "+destcountry+"  "+depdate+"  "+arrdate+"  "+deptime+"  "+arrtime+"  "+planenum+"  "+
-              //      travcompany+"  "+duration+"  "+economy+"  "+business+"  "+adult+"  "+child;
-
             string all=planenum+" from:"+depcountry+" to: "+destcountry+" date "+depdate+" arrdate "+arrdate;
             ui->listWidget->addItem(QString::fromStdString(all));
         }
@@ -66,10 +63,9 @@ listofflights::~listofflights()
 
 void listofflights::on_editpassenger_clicked()
 {
-    //ifedit=0;
+    ifedit=0;
     string x=ui->listWidget->currentItem()->text().toStdString();
     choice_planeid=x.substr(0,x.find(" "));
-    //choice_destcountry=x.substr(x.find(" ")+2,x.find(" "));
 
     hide();
     EditANewFlight a;

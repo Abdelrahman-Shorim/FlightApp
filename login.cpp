@@ -30,13 +30,6 @@ struct passenger
     char phonenumber[20];
     char passportnumber[20];
 };
- //string FN;
- //string LN;
- //string Gemail;
- //string password;
- //string birthdate;
- //string phonenumber;
- //string passportnumber;
 
 Login::Login(QWidget *parent) :
     QDialog(parent),
@@ -65,17 +58,6 @@ void Login::on_loginbtn_clicked()
 {
     string emailcheck=ui->emailinput->text().toStdString();
     string passcheck=ui->passwordinput->text().toStdString();
-        //int key=1;
-/*
-    if(emailcheck=="abdo"&&passcheck=="321")
-        {
-        key=1;
-            hide();
-            adminhomepage admin;
-            admin.setModal(true);
-            admin.exec();
-        }
-        */
     passenger x;
         ifstream infile;
         infile.open("C:\\FlightApp\\FlightApp\\passenger.bin");

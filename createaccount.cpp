@@ -11,13 +11,6 @@
 #include <string.h>
 #include <string>
 using namespace std;
-//string FN;
-//string LN;
-//string email;
-//string password;
-//string birthdate;
-//string phonenumber;
-//string passportnumber;
 
 char FN[20];
 char LN[20];
@@ -72,13 +65,6 @@ void CreateAccount::on_tousermain_clicked()
     strncpy(birthdate,ui->birthdate->toPlainText().toStdString().c_str(),sizeof (birthdate));
     strncpy(phonenumber,ui->phonenumber->toPlainText().toStdString().c_str(),sizeof (phonenumber));
     strncpy(passportnumber,ui->passportnumber->toPlainText().toStdString().c_str(),sizeof (passportnumber));
-//    FN=ui->firstname->toPlainText().toStdString();
-//    LN=ui->lastname->toPlainText().toStdString();
-//    email=ui->email->toPlainText().toStdString();
-//    password=ui->password->toPlainText().toStdString();
-//    birthdate=ui->birthdate->toPlainText().toStdString();
-//    phonenumber=ui->phonenumber->toPlainText().toStdString();
-//    passportnumber=ui->passportnumber->toPlainText().toStdString();
 
 
     hide();

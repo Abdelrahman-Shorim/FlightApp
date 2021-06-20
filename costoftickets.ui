@@ -48,7 +48,7 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>30</x>
+     <x>10</x>
      <y>100</y>
      <width>131</width>
      <height>31</height>
@@ -81,37 +81,12 @@
     </rect>
    </property>
   </widget>
-  <widget class="QComboBox" name="comboBox">
+  <widget class="QTextEdit" name="economy">
    <property name="geometry">
     <rect>
-     <x>380</x>
+     <x>490</x>
      <y>100</y>
-     <width>81</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <item>
-    <property name="text">
-     <string>adult</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>child</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>infant</string>
-    </property>
-   </item>
-  </widget>
-  <widget class="QTextEdit" name="textEdit_2">
-   <property name="geometry">
-    <rect>
-     <x>230</x>
-     <y>100</y>
-     <width>141</width>
+     <width>111</width>
      <height>31</height>
     </rect>
    </property>
@@ -224,6 +199,7 @@
     <string>A2</string>
    </property>
   </widget>
+<<<<<<< HEAD
   <widget class="QLabel" name="chosen_seat">
    <property name="geometry">
     <rect>
@@ -235,6 +211,42 @@
    </property>
    <property name="text">
     <string/>
+=======
+  <widget class="QTextEdit" name="business">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>100</y>
+     <width>104</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>110</y>
+     <width>91</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;business:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_8">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>100</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;economy:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+>>>>>>> 9abdc5a1b97d482d79faa7c623634e013a08c1a2
    </property>
   </widget>
  </widget>

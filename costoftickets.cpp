@@ -4,6 +4,7 @@
 #include "receipt.h"
 #include "visapayment.h"
 #include "planeseats.h"
+<<<<<<< HEAD
 #include <QLabel>
 #include<iostream>
 #include<QString>
@@ -13,14 +14,52 @@
 using namespace std;
 
 string selected_seat;
+=======
+#include <fstream>
+using namespace std;
+extern string planenumber;
+string payment;
+struct flights
+{
+    char depcountry[20];
+    char destcountry[20];
+    char depdate[20];
+    char arrdate[20];
+    char deptime[20];
+    char arrtime[20];
+    char planenum[20];
+    char travcompany[20];
+    char duration[20];
+    char economy[20];
+    char business[20];
+    char adult[20];
+    char child[20];
+};
+>>>>>>> 9abdc5a1b97d482d79faa7c623634e013a08c1a2
 
 costoftickets::costoftickets(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::costoftickets)
 {
     ui->setupUi(this);
+<<<<<<< HEAD
 
     ui->chosen_seat->setText(QString::fromStdString(selected_seat));
+=======
+    flights x;
+    ifstream infile;
+    infile.open("C:\\FlightApp\\FlightApp\\flights.bin");
+    while(infile.read((char*)&x,sizeof(x)))
+    {
+        if(planenumber==x.planenum)
+        {
+            ui->business->setText(x.business);
+            ui->economy->setText(x.economy);
+            break;
+        }
+    }
+    infile.close();
+>>>>>>> 9abdc5a1b97d482d79faa7c623634e013a08c1a2
 }
 
 costoftickets::~costoftickets()
@@ -40,6 +79,7 @@ void costoftickets::on_backtoavailableflights_clicked()
 
 void costoftickets::on_cash_clicked()
 {
+    payment="cash";
     hide();
     receipt r;
     r.setModal(true);
@@ -48,6 +88,7 @@ void costoftickets::on_cash_clicked()
 
 void costoftickets::on_visa_clicked()
 {
+    payment="visa";
     hide();
     VisaPayment v;
     v.setModal(true);

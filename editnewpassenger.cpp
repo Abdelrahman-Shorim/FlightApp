@@ -45,9 +45,9 @@ EditNewPassenger::EditNewPassenger(QWidget *parent) :
     ui(new Ui::EditNewPassenger)
 {
     ui->setupUi(this);
-    //converting to Qstring
     if(code==1)
     {
+        //data from create account
         QString fn=QString::fromStdString(FN);
         QString ln=QString::fromStdString(LN);
         QString Email=QString::fromStdString(email);
@@ -67,6 +67,7 @@ EditNewPassenger::EditNewPassenger(QWidget *parent) :
     }
     else if(code==0)
     {
+        //data from login
         QString fn=QString::fromStdString(firstn);
         QString ln=QString::fromStdString(lastn);
         QString Email=QString::fromStdString(mail);
