@@ -65,8 +65,8 @@ void Login::on_loginbtn_clicked()
 {
     string emailcheck=ui->emailinput->text().toStdString();
     string passcheck=ui->passwordinput->text().toStdString();
-        int key=0;
-
+        //int key=1;
+/*
     if(emailcheck=="abdo"&&passcheck=="321")
         {
         key=1;
@@ -75,6 +75,7 @@ void Login::on_loginbtn_clicked()
             admin.setModal(true);
             admin.exec();
         }
+        */
     passenger x;
         ifstream infile;
         infile.open("C:\\FlightApp\\FlightApp\\passenger.bin");
@@ -86,7 +87,7 @@ void Login::on_loginbtn_clicked()
             if(emailcheck==email&&pass==passcheck)
             {
                 //Gemail=email;
-                key=1;
+                //key=1;
                 firstn=x.FN;
                 lastn=x.LN;
                 mail=x.email;
@@ -103,8 +104,8 @@ void Login::on_loginbtn_clicked()
             }
         }
         infile.close();
-        if(key==0)
-            QMessageBox::information(this,"no account","if u don't have an account please create one",QMessageBox::Ok);
+        //if(key==0)
+            //QMessageBox::information(this,"no account","if u don't have an account please create one",QMessageBox::Ok);
 
 
 

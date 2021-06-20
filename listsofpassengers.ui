@@ -29,7 +29,14 @@
      <item>
       <widget class="QPushButton" name="toaddnewpassenger">
        <property name="text">
-        <string>Edit</string>
+        <string>add new passenger</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="editpassenger">
+       <property name="text">
+        <string>edit passenger</string>
        </property>
       </widget>
      </item>

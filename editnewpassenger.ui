@@ -325,7 +325,7 @@ font: 12pt &quot;MS Reference Sans Serif&quot;;</string>
     </rect>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_3">
+  <widget class="QPushButton" name="delete_2">
    <property name="geometry">
     <rect>
      <x>410</x>
