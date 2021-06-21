@@ -13,7 +13,7 @@ using namespace std ;
 extern string selected_seat;
 extern char email[20];
 extern string mail;
-extern string choice_planeid;
+extern string planenumber;
 
 struct seats
 {
@@ -30,13 +30,13 @@ PlaneSeats::PlaneSeats(QWidget *parent) :
 
 
    ui->setupUi(this);
-/*
+
     seats x;
     ifstream  input ;
     input.open("C:\\FlightApp\\FlightApp\\seats.bin");
     while(input.read((char*)&x,sizeof (x)))
     {
-        if(choice_planeid==x.planeid)
+        if(planenumber==x.planeid)
         {
             if(x.ar2[0]==-1)
                 ui->A1->setEnabled(0);
@@ -102,7 +102,7 @@ PlaneSeats::PlaneSeats(QWidget *parent) :
         }
     }
     input.close();
-*/
+
 }
 
 
@@ -119,7 +119,7 @@ void PlaneSeats::on_done_clicked()
     input.open("C:\\FlightApp\\FlightApp\\seats.bin");
     while(input.read((char*)&x,sizeof (x)))
     {
-        if(choice_planeid==x.planeid)
+        if(planenumber==x.planeid)
         {
             break;
         }
@@ -321,7 +321,7 @@ void PlaneSeats::on_done_clicked()
     while(infile.read((char*)&y,sizeof (y)))
     {
             //infile.read((char*)&x,sizeof (x));
-            if(choice_planeid==x.planeid)
+            if(planenumber==x.planeid)
             {
                 continue;
             }

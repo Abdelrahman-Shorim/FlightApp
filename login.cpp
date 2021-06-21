@@ -86,28 +86,22 @@ void Login::on_loginbtn_clicked()
             }
         }
         infile.close();
+
         //if(key==0)
             //QMessageBox::information(this,"no account","if u don't have an account please create one",QMessageBox::Ok);
 
 
 
-    /*if(name=="abdo"&&pass=="321")
+    if(emailcheck=="admin"&&passcheck=="123")
     {
         hide();
         adminhomepage admin;
         admin.setModal(true);
         admin.exec();
     }
-    else if(name=="nour"&&pass=="123")
-    {
-        hide();
-        userhomepage user;
-        user.setModal(true);
-        user.exec();
-    }
     else
         QMessageBox::information(this,"no account","if u don't have an account please create one",QMessageBox::Ok);
-        */
+
 }
 
 void Login::on_passwordinput_cursorPositionChanged(int arg1, int arg2)
