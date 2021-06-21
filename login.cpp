@@ -59,6 +59,8 @@ void Login::on_loginbtn_clicked()
     string emailcheck=ui->emailinput->text().toStdString();
     string passcheck=ui->passwordinput->text().toStdString();
     passenger x;
+
+
         ifstream infile;
         infile.open("C:\\FlightApp\\FlightApp\\passenger.bin");
         while(!infile.eof())
