@@ -18,6 +18,7 @@ listoftransactions::listoftransactions(QWidget *parent) :
     ui(new Ui::listoftransactions)
 {
     ui->setupUi(this);
+    /*
     transactions y;
     ifstream infile;
     infile.open("C:\\FlightApp\\FlightApp\\transactions.bin");
@@ -31,6 +32,7 @@ listoftransactions::listoftransactions(QWidget *parent) :
         string all=passengermail+"  "+planenumber+"  "+seat;
         ui->listWidget->addItem(QString::fromStdString(all));
     }
+    */
 
 }
 

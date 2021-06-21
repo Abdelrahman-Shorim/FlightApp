@@ -104,11 +104,12 @@ void availableflights::on_book_clicked()
         strncpy(y.passengermail,email,sizeof (y.passengermail));
     else if(code==0)
         strncpy(y.passengermail,mail.c_str(),sizeof (y.passengermail));
-
+/*
     ofstream outfile;
     outfile.open("C:\\FlightApp\\FlightApp\\transactions.bin",ios::app);
     outfile.write((char*)&y,sizeof(y));
     outfile.close();
+    */
     hide();
     costoftickets t;
     t.setModal(true);

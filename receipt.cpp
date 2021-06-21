@@ -23,6 +23,7 @@
 #include <QWidget>
 using namespace std;
 extern string planenumber;
+extern string selected_seat;
 struct flights
 {
     char depcountry[20];
@@ -88,6 +89,18 @@ receipt::~receipt()
 
 void receipt::on_home_clicked()
 {
+    /*ifstream input ;
+    int ar2[30] = {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1};
+  input.open("C:\\FlightApp\\FlightApp\\seats.bin");
+    while(input.read((char*)&,sizeof ()))
+    {
+
+    }*/
+
+
+
+
+
     hide();
     userhomepage h;
     h.setModal(true);
@@ -161,6 +174,7 @@ void receipt::on_home_clicked()
 
 void receipt::on_pushButton_clicked()
 {
+    /*
     transactions x;
     ifstream infile;
     infile.open("C:\\FlightApp\\FlightApp\\transactions.bin");
@@ -190,4 +204,5 @@ void receipt::on_pushButton_clicked()
     userhomepage s;
     s.setModal(true);
     s.exec();
+    */
 }

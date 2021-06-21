@@ -63,7 +63,6 @@ costoftickets::costoftickets(QWidget *parent) :
         }
     }
     infile.close();
-//>>>>>>> 9abdc5a1b97d482d79faa7c623634e013a08c1a2
 }
 
 costoftickets::~costoftickets()

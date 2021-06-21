@@ -64,6 +64,7 @@ listofflights::~listofflights()
 void listofflights::on_editpassenger_clicked()
 {
     ifedit=0;
+    // 12312 cairo france
     string x=ui->listWidget->currentItem()->text().toStdString();
     choice_planeid=x.substr(0,x.find(" "));
 
