@@ -17,6 +17,11 @@
 #include "planeseats.h"
 #include "receipt.h"
 #include "availableflights.h"
+#include <QFile>
+#include <QtThemeSupport/qtthemesupportversion.h>
+#include <QtWidgets/QApplication>
+#include <QDataStream>
+
 using namespace std;
 int code=0;
 struct passenger
@@ -33,6 +38,18 @@ struct passenger
 
 int main(int argc, char *argv[])
 {
+    /*
+    QApplication a(argc, argv);
+    QFile styleSheetFile("C://FlightApp./Gravira.qss");
+    if(styleSheetFile.open(QFile::ReadOnly))
+    {
+    QString stylesheet = QLatin1String(styleSheetFile.readAll());
+    a.setStyleSheet(stylesheet);
+    }
+    else
+        return false ;
+
+*/
     QApplication a(argc, argv);
 
     Login w;

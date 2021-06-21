@@ -19,7 +19,7 @@ struct seats
 {
     string planeid;
     int ar2[30] = {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1};
-    string ar1[30];
+    //string ar1[30];
 };
 
 
@@ -31,14 +31,31 @@ PlaneSeats::PlaneSeats(QWidget *parent) :
 
    ui->setupUi(this);
 
+<<<<<<< HEAD
     seats x;
     ifstream  input ;
     input.open("C:\\FlightApp\\FlightApp\\seats.bin");
     while(input.read((char*)&x,sizeof (x)))
     {
         if(planenumber==x.planeid)
+=======
+    /*seats x;
+    ifstream  input ;
+    input.open("C:\\FlightApp\\FlightApp\\seats.bin");
+    input.read((char*)&x,sizeof (x)) ;
+        if(choice_planeid==x.planeid)
+>>>>>>> 5794335e0f4c43993f30103420244a19bd144c88
         {
-            if(x.ar2[0]==-1)
+    arr x ;
+    ifstream  filo ;
+    filo.open("C:\\FlightApp\\FlightApp\\save.bin");
+    filo.read((char*)&x,sizeof (x)) ;
+    if(x.ar2[0]==-1)
+        ui->A1->setEnabled(0);
+         x.ar2[0]=-1 ;
+
+            */
+            /*if(x.ar2[0]==-1)
                 ui->A1->setEnabled(0);
             if(x.ar2[1]==-1)
                 ui->A2->setEnabled(0);
@@ -98,11 +115,16 @@ PlaneSeats::PlaneSeats(QWidget *parent) :
                 ui->F4->setEnabled(0);
             if(x.ar2[29]==-1)
                 ui->F5->setEnabled(0);
-            break;
-        }
+
+
     }
     input.close();
 
+<<<<<<< HEAD
+=======
+
+}*/
+>>>>>>> 5794335e0f4c43993f30103420244a19bd144c88
 }
 
 
@@ -114,6 +136,7 @@ PlaneSeats::~PlaneSeats()
 void PlaneSeats::on_done_clicked()
 {
     seats x;
+
 
     ifstream input;
     input.open("C:\\FlightApp\\FlightApp\\seats.bin");
@@ -307,6 +330,81 @@ void PlaneSeats::on_done_clicked()
         ui->F5->setEnabled(0);
         selected_seat="F5";
     }
+
+    /*input.open("C:\\FlightApp\\FlightApp\\seats.bin");
+    input.read((char*)&x,sizeof (x)) ;
+        if(choice_planeid==x.planeid)
+        {*/
+    /*ifstream  input ;
+    input.open("C:\\FlightApp\\FlightApp\\save.bin");
+    input.read((char*)&x,sizeof (x)) ;
+            if(x.ar2[0]==-1)
+                ui->A1->setEnabled(0);
+            if(x.ar2[1]==-1)
+                ui->A2->setEnabled(0);
+            if(x.ar2[2]==-1)
+                ui->A3->setEnabled(0);
+            if(x.ar2[3]==-1)
+                ui->A4->setEnabled(0);
+            if(x.ar2[4]==-1)
+                ui->A5->setEnabled(0);
+            if(x.ar2[5]==-1)
+                ui->B1->setEnabled(0);
+            if(x.ar2[6]==-1)
+                ui->B2->setEnabled(0);
+            if(x.ar2[7]==-1)
+                ui->B3->setEnabled(0);
+            if(x.ar2[8]==-1)
+                ui->B4->setEnabled(0);
+            if(x.ar2[9]==-1)
+                ui->B5->setEnabled(0);
+            if(x.ar2[10]==-1)
+                ui->C1->setEnabled(0);
+            if(x.ar2[11]==-1)
+                ui->C2->setEnabled(0);
+            if(x.ar2[12]==-1)
+                ui->C3->setEnabled(0);
+            if(x.ar2[13]==-1)
+                ui->C4->setEnabled(0);
+            if(x.ar2[14]==-1)
+                ui->C5->setEnabled(0);
+            if(x.ar2[15]==-1)
+                ui->D1->setEnabled(0);
+            if(x.ar2[16]==-1)
+                ui->D2->setEnabled(0);
+            if(x.ar2[17]==-1)
+                ui->D3->setEnabled(0);
+            if(x.ar2[18]==-1)
+                ui->D4->setEnabled(0);
+            if(x.ar2[19]==-1)
+                ui->D5->setEnabled(0);
+            if(x.ar2[20]==-1)
+                ui->E1->setEnabled(0);
+            if(x.ar2[21]==-1)
+                ui->E2->setEnabled(0);
+            if(x.ar2[22]==-1)
+                ui->E3->setEnabled(0);
+            if(x.ar2[23]==-1)
+                ui->E4->setEnabled(0);
+            if(x.ar2[24]==-1)
+                ui->E5->setEnabled(0);
+            if(x.ar2[25]==-1)
+                ui->F1->setEnabled(0);
+            if(x.ar2[26]==-1)
+                ui->F2->setEnabled(0);
+            if(x.ar2[27]==-1)
+                ui->F3->setEnabled(0);
+            if(x.ar2[28]==-1)
+                ui->F4->setEnabled(0);
+            if(x.ar2[29]==-1)
+                ui->F5->setEnabled(0);
+
+input.close();
+    }*/
+
+
+
+
 
 
     //##########################################################
