@@ -14,6 +14,7 @@
 #include "costoftickets.h"
 #include "listofflights.h"
 #include "listoftransactions.h"
+#include "planeseats.h"
 #include "receipt.h"
 #include "availableflights.h"
 using namespace std;
@@ -33,6 +34,7 @@ struct passenger
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
+
     Login w;
     w.show();
     return a.exec();

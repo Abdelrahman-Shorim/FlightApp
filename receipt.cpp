@@ -22,6 +22,7 @@
 #include "QFileDialog"
 #include <QWidget>
 using namespace std;
+extern string planenumber;
 struct flights
 {
     char depcountry[20];
@@ -37,6 +38,13 @@ struct flights
     char business[20];
     char adult[20];
     char child[20];
+};
+struct transactions
+{
+    char passengermail[20];
+    char planenumber[20];
+    char depcountry[20];
+    char destcountry[20];
 };
 extern string planenumber;
 extern string payment;
@@ -150,3 +158,36 @@ void receipt::on_home_clicked()
 
 
 
+
+void receipt::on_pushButton_clicked()
+{
+    transactions x;
+    ifstream infile;
+    infile.open("C:\\FlightApp\\FlightApp\\transactions.bin");
+    ofstream temp;
+    temp.open("C:\\FlightApp\\FlightApp\\temp.bin");
+    while(infile.read((char*)&x,sizeof(x)))
+    {
+        if(planenumber==x.planenumber)
+            continue;
+        else
+        {
+            temp.write((char*)&x,sizeof(x));
+        }
+    }
+    infile.close();
+    temp.close();
+
+    ofstream outfile1;
+    outfile1.open("C:\\FlightApp\\FlightApp\\transactions.bin");
+    ifstream temp1;
+    temp1.open("C:\\FlightApp\\FlightApp\\temp.bin");
+    while(temp1.read((char*)&x,sizeof(x)))
+    {
+        outfile1.write((char*)&x,sizeof(x));
+    }
+    hide();
+    userhomepage s;
+    s.setModal(true);
+    s.exec();
+}

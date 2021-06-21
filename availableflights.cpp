@@ -8,6 +8,7 @@
 #include<QListWidget>
 #include<QString>
 using namespace std;
+extern string selected_seat;
 string planenumber;
 extern int code;
 extern string mail;
@@ -34,6 +35,7 @@ struct transactions
     char planenumber[20];
     char depcountry[20];
     char destcountry[20];
+    char seat[20];
 };
 
 availableflights::availableflights(QWidget *parent) :
@@ -79,6 +81,7 @@ void availableflights::on_book_clicked()
 {
     flights x;
     transactions y;
+    strncpy(y.seat,selected_seat.c_str(),sizeof (y.seat));
     string choice=ui->listWidget->currentItem()->text().toStdString();
     //booked=choice.substr(0,choice.find(" "));
     planenumber=choice.substr(0,choice.find(" "));

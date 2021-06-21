@@ -2,6 +2,7 @@
 #include "ui_listoftransactions.h"
 #include "adminhomepage.h"
 #include "availableflights.h"
+#include "costoftickets.h"
 #include <fstream>
 using namespace std;
 struct transactions
@@ -10,6 +11,7 @@ struct transactions
     char planenumber[20];
     char depcountry[20];
     char destcountry[20];
+    char seat[20];
 };
 listoftransactions::listoftransactions(QWidget *parent) :
     QDialog(parent),
@@ -25,7 +27,8 @@ listoftransactions::listoftransactions(QWidget *parent) :
         string planenumber=y.planenumber;
         string depcountry=y.depcountry;
         string destcountry=y.destcountry;
-        string all=passengermail+"  "+planenumber+"  "+depcountry+"  "+destcountry;
+        string seat=y.seat;
+        string all=passengermail+"  "+planenumber+"  "+seat;
         ui->listWidget->addItem(QString::fromStdString(all));
     }
 

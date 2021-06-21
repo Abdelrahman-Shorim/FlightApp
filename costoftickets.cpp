@@ -4,6 +4,8 @@
 #include "receipt.h"
 #include "visapayment.h"
 #include "planeseats.h"
+#include "login.h"
+#include "mainwindow.h"
 #include <QLabel>
 #include<iostream>
 #include<QString>
@@ -11,7 +13,7 @@
 #include <QLineEdit>
 #include<fstream>
 using namespace std;
-
+extern int code;
 string selected_seat;
 #include <fstream>
 using namespace std;
@@ -33,7 +35,14 @@ struct flights
     char adult[20];
     char child[20];
 };
-
+struct transactions
+{
+    char passengermail[20];
+    char planenumber[20];
+    char depcountry[20];
+    char destcountry[20];
+    char seat[20];
+};
 costoftickets::costoftickets(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::costoftickets)
