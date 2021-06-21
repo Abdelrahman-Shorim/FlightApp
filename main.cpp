@@ -33,11 +33,7 @@ struct passenger
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-<<<<<<< HEAD
-    costoftickets w;
-=======
     Login w;
->>>>>>> 9abdc5a1b97d482d79faa7c623634e013a08c1a2
     w.show();
     return a.exec();
 }

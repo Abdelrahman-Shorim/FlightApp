@@ -28,8 +28,9 @@ PlaneSeats::PlaneSeats(QWidget *parent) :
     ui(new Ui::PlaneSeats)
 {
 
-   ui->setupUi(this);
 
+   ui->setupUi(this);
+/*
     seats x;
     ifstream  input ;
     input.open("C:\\FlightApp\\FlightApp\\seats.bin");
@@ -101,7 +102,7 @@ PlaneSeats::PlaneSeats(QWidget *parent) :
         }
     }
     input.close();
-
+*/
 }
 
 

@@ -4,7 +4,6 @@
 #include "receipt.h"
 #include "visapayment.h"
 #include "planeseats.h"
-<<<<<<< HEAD
 #include <QLabel>
 #include<iostream>
 #include<QString>
@@ -14,7 +13,6 @@
 using namespace std;
 
 string selected_seat;
-=======
 #include <fstream>
 using namespace std;
 extern string planenumber;
@@ -35,17 +33,14 @@ struct flights
     char adult[20];
     char child[20];
 };
->>>>>>> 9abdc5a1b97d482d79faa7c623634e013a08c1a2
 
 costoftickets::costoftickets(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::costoftickets)
 {
     ui->setupUi(this);
-<<<<<<< HEAD
 
     ui->chosen_seat->setText(QString::fromStdString(selected_seat));
-=======
     flights x;
     ifstream infile;
     infile.open("C:\\FlightApp\\FlightApp\\flights.bin");
@@ -59,7 +54,7 @@ costoftickets::costoftickets(QWidget *parent) :
         }
     }
     infile.close();
->>>>>>> 9abdc5a1b97d482d79faa7c623634e013a08c1a2
+//>>>>>>> 9abdc5a1b97d482d79faa7c623634e013a08c1a2
 }
 
 costoftickets::~costoftickets()
@@ -90,7 +85,7 @@ void costoftickets::on_visa_clicked()
 {
     payment="visa";
     hide();
-    VisaPayment v;
+    receipt v;
     v.setModal(true);
     v.exec();
 }

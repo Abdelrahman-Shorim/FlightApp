@@ -58,29 +58,6 @@
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;ticket price:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_4">
-   <property name="geometry">
-    <rect>
-     <x>130</x>
-     <y>370</y>
-     <width>91</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;Total:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-   </property>
-  </widget>
-  <widget class="QTextBrowser" name="textBrowser">
-   <property name="geometry">
-    <rect>
-     <x>230</x>
-     <y>360</y>
-     <width>181</width>
-     <height>41</height>
-    </rect>
-   </property>
-  </widget>
   <widget class="QTextEdit" name="economy">
    <property name="geometry">
     <rect>
@@ -89,19 +66,6 @@
      <width>111</width>
      <height>31</height>
     </rect>
-   </property>
-  </widget>
-  <widget class="Line" name="line">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>310</y>
-     <width>601</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="orientation">
-    <enum>Qt::Horizontal</enum>
    </property>
   </widget>
   <widget class="QPushButton" name="backtoavailableflights">
@@ -160,30 +124,20 @@
     </font>
    </property>
    <property name="text">
-    <string>View seats :</string>
+    <string>select your seat </string>
    </property>
   </widget>
   <widget class="QLabel" name="label_5">
    <property name="geometry">
     <rect>
-     <x>70</x>
-     <y>220</y>
+     <x>120</x>
+     <y>250</y>
      <width>171</width>
      <height>51</height>
     </rect>
    </property>
    <property name="text">
-    <string>Choose your wanted seats</string>
-   </property>
-  </widget>
-  <widget class="QComboBox" name="comboBox_2">
-   <property name="geometry">
-    <rect>
-     <x>410</x>
-     <y>210</y>
-     <width>121</width>
-     <height>31</height>
-    </rect>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;curresnt seat&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_6">
@@ -199,19 +153,6 @@
     <string>A2</string>
    </property>
   </widget>
-<<<<<<< HEAD
-  <widget class="QLabel" name="chosen_seat">
-   <property name="geometry">
-    <rect>
-     <x>380</x>
-     <y>170</y>
-     <width>47</width>
-     <height>14</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-=======
   <widget class="QTextEdit" name="business">
    <property name="geometry">
     <rect>
@@ -246,7 +187,19 @@
    </property>
    <property name="text">
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;economy:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
->>>>>>> 9abdc5a1b97d482d79faa7c623634e013a08c1a2
+   </property>
+  </widget>
+  <widget class="QLabel" name="chosen_seat">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>220</y>
+     <width>141</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
    </property>
   </widget>
  </widget>
