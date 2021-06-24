@@ -92,6 +92,11 @@
      <height>31</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:rgb(0, 0, 0);
+
+background-color:  rgb(255, 255, 255);</string>
+   </property>
   </widget>
   <widget class="QPushButton" name="createaccount">
    <property name="geometry">
@@ -126,6 +131,10 @@
      <width>211</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_3">
@@ -201,7 +210,6 @@
    </property>
   </widget>
   <zorder>label_3</zorder>
-  <zorder>label_2</zorder>
   <zorder>groupBox</zorder>
   <zorder>label</zorder>
   <zorder>emailinput</zorder>
@@ -210,6 +218,7 @@
   <zorder>label_4</zorder>
   <zorder>loginbtn</zorder>
   <zorder>label_5</zorder>
+  <zorder>label_2</zorder>
  </widget>
  <resources/>
  <connections/>

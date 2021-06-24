@@ -38,6 +38,15 @@ struct passenger
 
 int main(int argc, char *argv[])
 {
+    QApplication a(argc, argv);
+        QFile styleSheetFile("C://FlightApp./Diffnes.qss");
+        if(styleSheetFile.open(QFile::ReadOnly))
+        {
+        QString stylesheet = QLatin1String(styleSheetFile.readAll());
+        a.setStyleSheet(stylesheet);
+        }
+        else
+            return false ;
     /*
     QApplication a(argc, argv);
     QFile styleSheetFile("C://FlightApp./Gravira.qss");
@@ -50,7 +59,7 @@ int main(int argc, char *argv[])
         return false ;
 
 */
-    QApplication a(argc, argv);
+
 
     Login w;
     w.show();

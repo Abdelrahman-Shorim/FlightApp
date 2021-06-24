@@ -68,6 +68,7 @@ receipt::receipt(QWidget *parent) :
             ui->date->setText(x.depdate);
             ui->depfrom->setText(x.depcountry);
             ui->destination->setText(x.destcountry);
+            ui->seat->setText(QString::fromStdString(selected_seat));
         }
     }
     if(code==1)
@@ -106,6 +107,7 @@ void receipt::on_home_clicked()
     h.setModal(true);
     h.exec();
 }
+
     void receipt::on_pushButton_2_clicked()
 
     {
@@ -174,7 +176,7 @@ void receipt::on_home_clicked()
 
 void receipt::on_pushButton_clicked()
 {
-    /*
+
     transactions x;
     ifstream infile;
     infile.open("C:\\FlightApp\\FlightApp\\transactions.bin");
@@ -204,5 +206,5 @@ void receipt::on_pushButton_clicked()
     userhomepage s;
     s.setModal(true);
     s.exec();
-    */
+
 }

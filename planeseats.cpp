@@ -31,14 +31,7 @@ PlaneSeats::PlaneSeats(QWidget *parent) :
 
    ui->setupUi(this);
 
-<<<<<<< HEAD
-    seats x;
-    ifstream  input ;
-    input.open("C:\\FlightApp\\FlightApp\\seats.bin");
-    while(input.read((char*)&x,sizeof (x)))
-    {
-        if(planenumber==x.planeid)
-=======
+
     /*seats x;
     ifstream  input ;
     input.open("C:\\FlightApp\\FlightApp\\seats.bin");
@@ -124,7 +117,6 @@ PlaneSeats::PlaneSeats(QWidget *parent) :
 =======
 
 }*/
->>>>>>> 5794335e0f4c43993f30103420244a19bd144c88
 }
 
 
